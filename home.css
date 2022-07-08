@@ -1,6 +1,7 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('C:\\Users\\loliveira\\Downloads\\Desktop - Inicial.png');
+    background-color: #3772FF;
+    background-image: url('C:\\Users\\loliveira\\Downloads\\Vector 1.png');
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -46,6 +47,10 @@ body {
 
 .botao {
     color: white;
-    background-color: red;
+    background-color: #FC7071;
     padding: 30% 40% 30% 40%;
+}
+
+footer p {
+    text-align: center;
 }
