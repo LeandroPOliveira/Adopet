@@ -1,0 +1,51 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('C:\\Users\\loliveira\\Downloads\\Desktop - Inicial.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icone {
+    width: 25%;
+    padding: 4.2rem;
+}
+
+.boas-vindas {
+    padding-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.introducao {
+    padding: 5% 30% 0 30%;
+    line-height: 150%;
+    text-align: center;
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    padding: 30% 40% 30% 40%;
+}
+
+.botao {
+    color: white;
+    background-color: red;
+    padding: 30% 40% 30% 40%;
+}
