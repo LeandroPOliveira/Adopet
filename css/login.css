@@ -1,0 +1,54 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FCF0E3;
+    background-image: url('C:\\Users\\loliveira\\Desktop\\Nova pasta\\Vector 1.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icone {
+    width: 25%;
+    padding: 4.2rem;
+}
+
+.boas-vindas {
+    padding-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #3772FF;
+}
+
+.introducao {
+    padding: 5% 30% 0 30%;
+    line-height: 150%;
+    text-align: center;
+    color: #3772FF;
+    font-size: 1.5rem;
+}
+
+
+footer p {
+    text-align: center;
+    background-color: #36D6AD;
+    padding: 3rem;
+    color: aliceblue;
+}
+
+.formularios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
