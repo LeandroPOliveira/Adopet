@@ -24,21 +24,18 @@ body {
     padding: 4.2rem;
 }
 
-.boas-vindas {
+.mensagem {
     padding-top: 2rem;
     font-size: 2rem;
     text-align: center;
     color: #3772FF;
 }
 
-.introducao {
-    padding: 5% 30% 0 30%;
-    line-height: 150%;
-    text-align: center;
-    color: #3772FF;
-    font-size: 1.5rem;
+.formularios-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
 
 footer p {
     text-align: center;
@@ -47,8 +44,3 @@ footer p {
     color: aliceblue;
 }
 
-.formularios {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
