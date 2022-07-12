@@ -38,16 +38,30 @@ body {
     font-size: 1.5rem;
 }
 
-.formularios {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.flex-outer li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.formulario {
-    text-align: center;
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+ 
+.flex-outer > li > label + *,
+.flex-inner {
+  flex: 1 0 220px;
+}
+
+
+input {
+    resize: horizontal;
 }
 
 footer p {
     text-align: center;
 }
+
