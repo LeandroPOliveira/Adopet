@@ -1,0 +1,26 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    background-image: url('C:\\Users\\loliveira\\Desktop\\Nova pasta\\Vector 1.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icone {
+    width: 25%;
+    padding: 4.2rem;
+}
+

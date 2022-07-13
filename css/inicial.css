@@ -32,25 +32,37 @@ body {
 }
 
 .introducao {
-    padding: 5% 30% 0 30%;
+    padding: 5% 25% 0 25%;
     line-height: 150%;
     text-align: center;
     color: aliceblue;
     font-size: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .botoes {
-    display: flex;
-    flex-direction: column;
-    padding: 30% 40% 30% 40%;
+    text-align: center;
 }
 
 .botao {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     color: white;
     background-color: #FC7071;
-    padding: 30% 40% 30% 40%;
+    border: none;
+    margin-top: 1rem;
+    margin: 1rem 0 1rem 0;
+    font-weight: bold;
+    width: 200px;
+    border-radius: 4px;
+}
+
+.botao:hover {
+    cursor: pointer;
+    background: #c44f4f;
 }
 
 footer p {
+    margin-top: 2rem;
     text-align: center;
+    color: white;
 }
