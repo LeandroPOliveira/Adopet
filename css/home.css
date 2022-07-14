@@ -1,0 +1,72 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: gray;
+    background-image: url('C:\\Users\\loliveira\\Desktop\\Nova pasta\\Vector 1.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icone {
+    align-items: stretch;
+    
+    padding: 4.2rem;
+}
+
+#intro {
+    padding-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #3772FF;
+}
+
+.animal {
+    width: 90%;
+    height: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    
+}
+
+.container {
+    margin: 5rem 5rem 5rem 5rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+.ficha-animal {
+    margin-left: 1rem;
+    height: 100px;
+    height: 200px;
+    background-color: aliceblue;    
+}
+
+.descricao {
+    background-color: aliceblue;
+    margin-right: 1rem;
+}
+
+.nome {
+    margin: 1rem 0 1.5rem 0;
+    font-weight: bold;
+    color: #3772FF;
+}
+
+.local {
+
+}
