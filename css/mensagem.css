@@ -1,0 +1,74 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icone {
+    width: 25%;
+    padding: 4.2rem;
+}
+
+.mensagem {
+    padding: 2rem 5rem 2rem 5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #3772FF;
+}
+
+.formulario {
+    font-size: 28px;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    background-color: lightblue;
+    margin: 0 5% 0 5%;
+    
+}
+
+label {
+    font-weight: bold;
+    color: #737380;
+    margin-bottom: 0.5em;
+}
+
+input {
+    color: #edebeb;
+    text-align: center;
+    margin: 5% 20% 5% 20%;
+    padding: 1rem 1rem 1rem 1rem;
+    border: none;
+    font-size: 28px;
+    border-radius: 4px;
+    background-color: #F6F6F6;
+    box-shadow: 2px 2px #e3e1e1;
+}
+
+button {
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: #FC7071;
+    margin: 1rem 0 1rem 0;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+footer p {
+    text-align: center;
+}
+
