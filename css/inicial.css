@@ -13,6 +13,7 @@ main {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: auto;
+    
 }
 
 .logo {
@@ -51,6 +52,7 @@ main {
 
 .botoes {
     text-align: center;
+
 }
 
 .botao {
@@ -69,12 +71,6 @@ main {
 .botao:hover {
     cursor: pointer;
     background: #c44f4f;
-}
-
-#rodape {
-    font-size: 26px;
-    
-    color: white;   
 }
 
 footer {
