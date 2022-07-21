@@ -13,11 +13,15 @@ main {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: auto;
-    
+}
+
+.logotipo {
+    display: none;
 }
 
 .logo {
-    width: 50%;
+    width: 400px;
+    max-width: 400px;
     margin: 20% auto 0 auto;
     display: block;
 }
@@ -78,4 +82,26 @@ footer {
     margin-top: 75%;
     background-color: #36D6AD;
     height: 120px;
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-size: 40% 20%, auto;
+    }
+
+    .logotipo {
+        display: inline;
+        width: 100px;
+    }
+    .figuras {
+        width:20px;
+        margin-left: 0;
+    }
+    .icones {
+        margin-top: 1rem;
+        display: flex;
+    }
+    .logo {
+        margin-top: 0;
+    }
 }
