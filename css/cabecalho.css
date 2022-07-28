@@ -1,0 +1,76 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #3772FF;
+    background-image: url('../img/Forma_1.png'), url('../img/Forma_2.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, right;
+    background-size: 95% 30%, auto;
+}
+
+main {
+    flex: 1;
+    background-image: url('../img/Ilustração.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto;
+}
+
+.logotipo {
+    display: none;
+}
+
+.logo {
+    width: 300px;
+    max-width: 400px;
+    margin: 20% auto 0 auto;
+    display: block;
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icone {
+    margin: 5rem 1.5rem 2rem 5rem;
+    width: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-size: 75% 30%, auto;
+    }
+    .logotipo {
+        display: inline;
+        width: 150px;
+    }
+    .figuras {
+        margin: 5rem 1.5rem 2rem 3rem;
+        width: 1.9rem;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-size: 40% 20%, auto;
+    }
+
+    .logotipo {
+        display: inline;
+        width: 100px;
+    }
+    .figuras {
+        width:20px;
+        margin-left: 1.5rem;
+    }
+    .icone {
+        margin-top: 3rem;
+        display: flex;
+    }
+    .logo {
+        margin-top: 0;
+    }
+}
