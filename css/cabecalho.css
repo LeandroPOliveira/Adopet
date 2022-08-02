@@ -7,24 +7,10 @@ body {
     background-size: 95% 30%, auto;
 }
 
-main {
-    flex: 1;
-    background-image: url('../img/Ilustração.png');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: auto;
-}
-
 .logotipo {
     display: none;
 }
 
-.logo {
-    width: 300px;
-    max-width: 400px;
-    margin: 20% auto 0 auto;
-    display: block;
-}
 
 .icones {
     display: flex;
@@ -55,7 +41,7 @@ main {
 
 @media screen and (min-width: 1024px) {
     body {
-        background-size: 40% 20%, auto;
+        background-size: 40% 40%, auto;
     }
 
     .logotipo {
