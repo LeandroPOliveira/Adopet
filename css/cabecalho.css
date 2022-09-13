@@ -1,16 +1,15 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #3772FF;
+    
     background-image: url('../img/Forma_1.png'), url('../img/Forma_2.png');
     background-repeat: no-repeat, no-repeat;
     background-position: top left, right;
-    background-size: 95% 30%, auto;
+    background-size: 95% 30%, 20% 40%;
 }
 
 .logotipo {
     display: none;
 }
-
 
 .icones {
     display: flex;
@@ -20,8 +19,8 @@ body {
 }
 
 .icone {
-    margin: 5rem 1.5rem 2rem 5rem;
-    width: 2.5rem;
+    margin: 3.5rem 1.5rem 2rem 2.5rem;
+    width: 1.8rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -30,11 +29,11 @@ body {
     }
     .logotipo {
         display: inline;
-        width: 150px;
+        width: 120px;
     }
     .figuras {
-        margin: 5rem 1.5rem 2rem 3rem;
-        width: 1.9rem;
+        margin: 3.5rem 1.5rem 2rem 2.5rem;
+        width: 1.5rem;
     }
 }
 
@@ -44,18 +43,22 @@ body {
         background-size: 40% 40%, auto;
     }
 
-    .logotipo {
-        display: inline;
-        width: 100px;
-    }
-    .figuras {
-        width:20px;
-        margin-left: 1.5rem;
+    .icones {
+        margin-left: 3rem;
     }
     .icone {
-        margin-top: 3rem;
-        display: flex;
+        margin: 4rem 2.5rem 2rem 2.5rem;
     }
+
+    .logotipo {
+        display: inline;
+        width: 120px;
+    }
+    .figuras {
+        width:25px;
+        margin-left: 1.5rem;
+    }
+    
     .logo {
         margin-top: 0;
     }

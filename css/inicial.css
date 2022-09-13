@@ -1,23 +1,31 @@
+body {
+    background-color: #3772FF;  
+}
+
 .logo {
-    width: 320px;
+    width: 240px;
     max-width: 400px;
     margin: 20% auto 0 auto;
     display: block;
 }
 
 .boas-vindas {
-    padding-top: 4.5rem;
-    font-size: 3.2rem;
+    padding-top: 3rem;
+    font-size: 2rem;
     text-align: center;
     color: aliceblue;
 }
 
-.introducao {
-    margin: 3rem 5rem;
+.introducao__mobile {
+    margin: 2rem 4.5rem 1rem;
     line-height: 150%;
     text-align: center;
     color: aliceblue;
-    font-size: 2rem;
+    font-size: 1.2rem;
+}
+
+.introducao__outras {
+    display: none;
 }
 
 .botoes {
@@ -26,13 +34,13 @@
 }
 
 .botao {
-    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 1.2rem 0 1.2rem 0;
     color: white;
     background-color: #FC7071;
     border: none;
-    margin-top: 1rem;
+    
     margin: 1rem 0 1rem 0;
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     width: 50%;
     border-radius: 7px;
@@ -43,48 +51,66 @@
     background: #c44f4f;
 }
 
-main {
-    height: 115vh;
-    background-image: url('../img/Ilustração.png');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 70%;
+.pets {
+    display: block;
+    margin: 1rem auto -1.125rem auto;
+    width: 70%;
 }
 
 @media screen and (min-width: 768px) {
-    main {
-        background-size: 45%;
-        height: 105vh;
+    .boas-vindas {
+        font-size: 1.8rem;
+    }
+    
+    .introducao__mobile {
+        display: none;
+    }
+
+    .introducao__outras {
+        display: block;
+        margin: 2rem 12.2rem 1rem;
+        line-height: 150%;
+        text-align: center;
+        color: aliceblue;
+        font-size: 1.2rem;
+    }
+
+
+    .botao {
+        padding: 1rem 0 1rem 0;
+        width: 40%;
+    }
+
+    .pets {
+        width: 40%;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .logo {
-        margin-top: 3rem;
-        width: 300px;
+        margin-top: 1rem;
+        width: 270px;
     }
     .boas-vindas {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
-    .introducao {
-        margin: 3rem 28rem 1rem;
+    .introducao__outras {
+        margin: 3rem 30rem 1rem;
         line-height: 1.5;
         text-align: center;
         color: aliceblue;
         font-size: 1.2rem;
     }
-    main {
-        background-size: 25%;
-        height: 100vh;
-    }
+    
     .botao {
         padding: 1rem 1.5rem 1rem 1.5rem;
-        color: white;
-        background-color: #FC7071;
-        border: none;
         margin: 1rem 0 1rem 0;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        width: 25%;
+    }
+
+    .pets {
         width: 25%;
     }
 }
