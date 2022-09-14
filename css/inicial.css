@@ -1,5 +1,6 @@
 body {
-    background-color: #3772FF;  
+    background-color: #3772FF;
+    background-size: 95% 30%, 20% 40%, 0;  
 }
 
 .logo {
@@ -58,6 +59,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+    body {
+        background-size: 75% 30%, auto, 0;
+    }
     .boas-vindas {
         font-size: 1.8rem;
     }
@@ -87,6 +91,9 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+    body {
+        background-size: 40% 40%, auto, 0;
+    }
     .logo {
         margin-top: 1rem;
         width: 270px;
