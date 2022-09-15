@@ -2,45 +2,45 @@
 <html lang='pt-br'>
     <head>
         <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>Adopet - Mensagem</title>
         <link rel='stylesheet' href='./css/reset.css'>
-        <link rel='stylesheet' href='normalize.css'>
+        <link rel='stylesheet' href='./css/normalize.css'>
+        <link rel='stylesheet' href="./css/cabecalho.css">
+        <link rel='stylesheet' href="./css/rodape.css">
         <link rel='stylesheet' href="./css/mensagem.css">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-
     </head>
     
     <body> 
         <header>
             <ul class="icones">
-                <li><img class="icone" src='./img/Casa.png'></li>
-                <li><img class="icone" src='./img/Mensagens.png'></li>
+                <li><img class="icone logotipo" src='./img/Logo.png'></li>
+                <li><img class="icone figuras " src='./img/Casa.svg'></li>
+                <li><img class="icone figuras" src='./img/Mensagens.svg'></li>
             </ul>
         </header>
         <main>
-            <img class="logo" src='./img/Logo_-_azul.png'>
-            <p class='mensagem'>Envie uma mensagem para a pessoa ou instituição que está cuidando do animal:</p>
-            <form>
-                <div class="formulario">
+            <h1 class="mensagem">Envie uma mensagem para a pessoa ou instituição que está cuidando do animal:</h1>
+            <form class="formulario">
+                <div class="formulario__item">
                     <label for="nome">Nome</label>
-                    <input type="text" id='nome' placeholder="Digite seu nome Completo">
+                    <input type="text" id='nome' placeholder="Insira seu nome completo">
                 </div>
-                <div class="formulario">
-                    <label for="email">Email</label>
-                    <input type="text" id='email' placeholder="Digite seu melhor email">
+                <div class="formulario__item">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id='telefone' placeholder="Insira seu telefone e/ou whatsapp">
                 </div>
-                <div class="formulario">
-                    <label for="senha">Senha</label>
-                    <input type="text" id='senha' placeholder="Crie uma senha">
+                <div class="formulario__item">
+                    <label for="animal">Nome do animal</label>
+                    <input type="text" id='animal' placeholder="Por qual animal você se interessou?">
                 </div>
-                <div class="formulario">
-                    <label for="confirma-senha">Confirme sua senha</label>
-                    <input type="text" id='confirma-senha' placeholder="Repita a senha criada">
+                <div class="formulario__item">
+                    <label for="mensagem">Mensagem</label>
+                    <input type="text" id='mensagem' placeholder="Escreva sua mensagem">
                 </div>
-                <div class="formulario">
-                    <button>Cadastrar!</button>
+                <div class="formulario__item form-botao">
+                    <button>Enviar</button>
                 </div>
             </form>
         </main>

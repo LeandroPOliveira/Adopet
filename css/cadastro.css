@@ -47,7 +47,7 @@ input {
 
 button {
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 500;
     border-radius: 4px;
     border: none;
     color: white;

@@ -1,10 +1,14 @@
+button, input {
+    font-family: Poppins;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: white;
     background-image: url('../img/Forma_1.png'), url('../img/Forma_2.png'), url('../img/Patas.png');
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: top left, right, top right;
-    background-size: 95% 30%, 20% 40%, 40% 20%;
+    background-size: 95% 350px, 20% 40%, 40% 20%;
 }
 
 .logotipo {
@@ -25,7 +29,7 @@ body {
 
 @media screen and (min-width: 768px) {
     body {
-        background-size: 75% 30%, auto, 0;
+        background-size: 75% 450px, auto, 0;
     }
     .logotipo {
         display: inline;
@@ -40,7 +44,7 @@ body {
 
 @media screen and (min-width: 1024px) {
     body {
-        background-size: 40% 40%, auto, 0;
+        background-size: 40% 450px, auto, 0;
     }
 
     .icones {

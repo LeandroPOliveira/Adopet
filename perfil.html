@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopet - Perfil</title>
+    <link rel='stylesheet' href='./css/reset.css'>
+    <link rel='stylesheet' href='./css/normalize.css'>
+    <link rel='stylesheet' href="./css/cabecalho.css">
+    <link rel='stylesheet' href="./css/rodape.css">
+    <link rel='stylesheet' href="./css/perfil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <ul class="icones">
+            <li><img class="icone logotipo" src='./img/Logo.svg'></li>
+            <li><a href="home.html"><img class="icone figuras " src='./img/Casa.svg'></li></a>
+            <li><a href="mensagem.html"><img class="icone figuras" src='./img/Mensagens.svg'></a></li>
+        </ul>
+    </header>
+    <main>
+        <h1 class="mensagem">Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.</h1>
+        <form class="formulario">
+            <p class="formulario__titulo">Perfil</p>
+            <div class="formulario__item foto">
+                <p class="n-foto">Foto</p>
+                <img src="./img/Vector.png" alt="">
+                <p class="desc-foto">Clique na foto para editar</a>
+            </div>
+            <div class="formulario__item">
+                <label for="nome">Nome</label>
+                <input type="text" id='nome' placeholder="Leandro">
+            </div>
+            <div class="formulario__item">
+                <label for="telefone">Telefone</label>
+                <input type="text" id='telefone' placeholder="55 11 XXXXXXXXX">
+            </div>
+            <div class="formulario__item">
+                <label for="cidade">Cidade</label>
+                <input type="text" id='cidade' placeholder="São Paulo">
+            </div>
+            <div class="formulario__item sobre">
+                <label for="sobre">Sobre</label>
+                <input type="text" id='sobre' placeholder="Lorem ipsum">
+            </div>
+            <div class="formulario__item form-botao">
+                <button>Salvar</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>2022 - Desenvolvido por Alura</p>
+    </footer>
+</body>
+</html>
