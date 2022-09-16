@@ -1,18 +1,18 @@
 body {
     background-color: #3772FF;
-    background-size: 95% 30%, 20% 40%, 0;  
+    background-size: 0, 95% 350px, 20% 40%;  
 }
 
 .logo {
     width: 240px;
     max-width: 400px;
-    margin: 20% auto 0 auto;
+    margin: 4rem auto 0;
     display: block;
 }
 
 .boas-vindas {
-    padding-top: 3rem;
-    font-size: 2rem;
+    margin-top: 2.5rem;
+    font-size: 1.8rem;
     text-align: center;
     color: aliceblue;
 }
@@ -35,13 +35,12 @@ body {
 }
 
 .botao {
-    padding: 1.2rem 0 1.2rem 0;
+    padding: 0.8rem 0 0.8rem 0;
     color: white;
     background-color: #FC7071;
     border: none;
-    
     margin: 1rem 0 1rem 0;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 500;
     width: 50%;
     border-radius: 7px;
@@ -60,8 +59,14 @@ body {
 
 @media screen and (min-width: 768px) {
     body {
-        background-size: 75% 30%, auto, 0;
+        background-size: 0, 75% 450px, auto;
     }
+
+    .logo {
+        margin: 8rem auto 0;
+        width: 280px;
+    }
+
     .boas-vindas {
         font-size: 1.8rem;
     }
@@ -92,12 +97,14 @@ body {
 
 @media screen and (min-width: 1024px) {
     body {
-        background-size: 40% 40%, auto, 0;
+        background-size: 0, 40% 450px, auto;
     }
+
     .logo {
-        margin-top: 1rem;
-        width: 270px;
+        margin: 0 auto 0;
+        width: 290px;
     }
+
     .boas-vindas {
         font-size: 1.8rem;
     }
@@ -111,7 +118,7 @@ body {
     }
     
     .botao {
-        padding: 1rem 1.5rem 1rem 1.5rem;
+        padding: 0.9rem 1.5rem 0.9rem 1.5rem;
         margin: 1rem 0 1rem 0;
         font-size: 1.3rem;
         width: 25%;

@@ -5,10 +5,10 @@ button, input {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: white;
-    background-image: url('../img/Forma_1.png'), url('../img/Forma_2.png'), url('../img/Patas.png');
+    background-image: url('../img/Patas.svg'), url('../img/Forma_1.png'), url('../img/Forma_2.png');
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: top left, right, top right;
-    background-size: 95% 350px, 20% 40%, 40% 20%;
+    background-position: top right, top left, right;
+    background-size: 45% 250px, 95% 350px, 20% 40%;
 }
 
 .logotipo {
@@ -18,18 +18,19 @@ body {
 .icones {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: stretch;
     align-items: center;
 }
 
 .icone {
     margin: 3.5rem 1.5rem 2rem 2.5rem;
     width: 1.8rem;
+    height: 1.8rem;
 }
 
 @media screen and (min-width: 768px) {
     body {
-        background-size: 75% 450px, auto, 0;
+        background-size: 30% 300px, 75% 450px, auto;
     }
     .logotipo {
         display: inline;
@@ -38,13 +39,15 @@ body {
     .figuras {
         margin: 3.5rem 1.5rem 2rem 2.5rem;
         width: 1.5rem;
+        height: 1.5rem;
+        
     }
 }
 
 
 @media screen and (min-width: 1024px) {
     body {
-        background-size: 40% 450px, auto, 0;
+        background-size: 20% 400px, 40% 450px, auto;
     }
 
     .icones {

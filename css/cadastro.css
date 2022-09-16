@@ -1,13 +1,13 @@
 .logo-azul {
-    width: 170px;
+    width: 180px;
     display: block;
-    margin: 1rem auto 0;
+    margin: 3.3rem auto 0;
 }
 
 
 .boas-vindas {
     padding-top: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
     margin: 0 2rem;
     line-height: 1.5;
@@ -53,22 +53,19 @@ button {
     color: white;
     background-color: #FC7071;
     margin: 0 1rem 2rem;
-    padding: 1rem;
+    padding: 0.6rem;
     width: 40%;
 }
 
 
 @media screen and (min-width: 768px) {
-    body {
-        background-size: 75% 30%, auto, 30% 25%;
-    }
     .logo-azul {
-        width: 200px;
-        margin: 3rem auto 0;
+        width: 240px;
+        margin: 7rem auto 0;
     }
     
     .boas-vindas {
-        margin: 0 6rem;
+        margin: 0 8rem;
     }
     
     .formulario {
@@ -91,13 +88,15 @@ button {
 }
 
 @media screen and (min-width: 1024px) {
-    body {
-        background-size: 40% 40%, auto, 20% 35%;
-    }
     .logo-azul {
-        width: 240px;
+        margin: 0 auto;
+        width: 290px;
     }
     
+    .boas-vindas {
+        margin: 0 30rem;
+    }
+
     .formulario {
         margin: 2rem 0;
     }
