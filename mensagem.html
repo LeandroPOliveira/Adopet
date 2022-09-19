@@ -14,11 +14,14 @@
     
     <body> 
         <header>
-            <ul class="icones">
-                <li><img class="icone logotipo" src='./img/Logo.png'></li>
-                <li><img class="icone figuras " src='./img/Casa.svg'></li>
-                <li><img class="icone figuras" src='./img/Mensagens.svg'></li>
-            </ul>
+            <div class="cabecalho">
+                <ul class="icones">
+                    <li><img class="icone logotipo" src='./img/Logo.svg'></li>
+                    <li><a href="home.html"><img class="icone figuras " src='./img/Casa.svg'></li></a>
+                    <li><a href="mensagem.html"><img class="icone figuras" src='./img/Mensagens.svg'></a></li>
+                </ul>
+                <img class="cabecalho__usuario" src="./img/Usuário.png" alt="">
+            </div>
         </header>
         <main>
             <h1 class="mensagem">Envie uma mensagem para a pessoa ou instituição que está cuidando do animal:</h1>
@@ -35,9 +38,9 @@
                     <label for="animal">Nome do animal</label>
                     <input type="text" id='animal' placeholder="Por qual animal você se interessou?">
                 </div>
-                <div class="formulario__item">
+                <div class="formulario__item formulario__mensagem">
                     <label for="mensagem">Mensagem</label>
-                    <input type="text" id='mensagem' placeholder="Escreva sua mensagem">
+                    <textarea type="text" rows="7" id='mensagem' placeholder="Escreva sua mensagem"></textarea>
                 </div>
                 <div class="formulario__item form-botao">
                     <button>Enviar</button>

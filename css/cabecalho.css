@@ -1,4 +1,4 @@
-button, input {
+button, input, textarea {
     font-family: Poppins;
 }
 
@@ -9,6 +9,17 @@ body {
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: top right, top left, right;
     background-size: 45% 250px, 95% 350px, 20% 40%;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cabecalho__usuario {
+    width: 3rem;
+    height: 3rem;
+    margin: 3rem 2.5rem 2rem 2.5rem;
 }
 
 .logotipo {
@@ -32,6 +43,11 @@ body {
     body {
         background-size: 30% 300px, 75% 450px, auto;
     }
+
+    .cabecalho {
+        justify-content: space-between;
+    }
+
     .logotipo {
         display: inline;
         width: 120px;
@@ -48,6 +64,11 @@ body {
 @media screen and (min-width: 1024px) {
     body {
         background-size: 20% 400px, 40% 450px, auto;
+    }
+
+    .cabecalho {
+        justify-content: space-between;
+        margin: auto 4rem;
     }
 
     .icones {
