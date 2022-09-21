@@ -45,7 +45,7 @@ label, .n-foto {
 
 .desc-foto {
     margin-top: 1rem;
-    color: lightcoral
+    color: lightcoral;
 }
 
 input, textarea {
@@ -59,7 +59,7 @@ input, textarea {
 }
 
 ::placeholder {
-    color: lightgray
+    color: lightgray;
 }
 
 button {
