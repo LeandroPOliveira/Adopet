@@ -1,0 +1,38 @@
+{% extends 'template.html' %}
+{% block conteudo %}
+
+        <main onload="alterarCss()">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-success">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+            <img class="logo" src="{{ url_for('static', filename='img/Logo.svg') }}" alt="Logo Adopet">
+            <h1 class='mensagem'>Já tem conta? Faça seu login:</h1>
+                
+            <form method="POST" action="{{ url_for('autenticar') }}">
+                <input type="hidden" name="proxima" value="{{ proxima }}">
+                {{ form.csrf_token() }}
+                <div class="formulario">
+                    {{ form.usuario.label(class="form-label") }}
+                    {{ form.usuario(class="form-control") }}
+                </div>
+                <div class="formulario form-senha">
+                    {{ form.senha.label(class="form-label") }}
+                    {{ form.senha(class="form-control") }}
+                </div>
+                <div class="formulario">
+                    <a href="">Esqueci minha senha</a>
+                </div>
+                <div class="formulario form-botao">
+                    {{ form.login(class="btn btn-primary") }}
+                </div>
+            </form>
+            <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        </main>
+
+{% endblock %}

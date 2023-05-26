@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<html lang='pt-br'>
-    <head>
-        <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>Adopet - Cadastro</title>
-        <link rel='stylesheet' href='./css/reset.css'>
-        <link rel='stylesheet' href='normalize.css'>
-        <link rel='stylesheet' href="./css/cabecalho.css">
-        <link rel='stylesheet' href="./css/rodape.css">
-        <link rel='stylesheet' href="./css/cadastro.css">
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+{% extends 'template.html' %}
+{% block conteudo %}
 
-    </head>
-    
-    <body> 
-        <header>
-            <ul class="icones">
-                <li><img class="icone logotipo" src='./img/Logo.svg'></li>
-                <li><img class="icone figuras" src='./img/Casa.svg'></li>
-                <li><img class="icone figuras" src='./img/Mensagens.svg'></li>
-            </ul>
-        </header>
         <main>
             <img class="logo-azul" src='./img/Logo_-_azul.svg' alt="Logo Adopet">
             <h1 class='boas-vindas'>Ainda não tem cadastro?<br>Então antes de buscar seu melhor amigo, precisamos de alguns dados:</h1>
@@ -48,9 +26,5 @@
                 </div>
             </form>
         </main>
-        <footer>
-            <p>2022 - Desenvolvido por Alura</p>
-        </footer>
-    </body>
 
-</html>
+   {% endblock %}

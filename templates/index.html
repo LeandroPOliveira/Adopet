@@ -1,0 +1,19 @@
+{% extends 'template.html' %}
+{% block conteudo %}
+
+        <main>
+            <img class="logo" src="{{ url_for('static', filename='img/Logo.svg') }}" alt="Logo Adopet">
+            <h1 class='boas-vindas'>Boas-vindas!</h1>
+            <p class="introducao__mobile">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+            <p class="introducao__outras">Adotar pode mudar uma vida. Que tal buscar seu novo melhor amigo? Vem com a gente!</p>
+
+            <div class="botoes">
+                <a href="login.html"><button class="botao">Já tenho conta</button></a>
+            </div>
+            <div class="botoes">
+                <a href="cadastro.html"><button class="botao">Quero me cadastrar</button></a>
+            </div>
+            <img src="{{ url_for('static', filename='img/Ilustracao.png') }}" alt="Ilustração de um cão e um gato" class="pets">
+        </main>
+
+    {% endblock %}
