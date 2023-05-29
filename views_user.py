@@ -14,13 +14,13 @@ def login():
 
 @app.route('/autenticar', methods=['POST', ])
 def autenticar():
-    form = FormularioUsuario(request.form)
-    usuario = Usuarios.query.filter_by(usuario=form.usuario.data).first()
-    senha = check_password_hash(usuario.senha, form.senha.data)
+    form = FormularioUsuario(request.form)  # instanciar a validação do formulario
+    usuario = Usuarios.query.filter_by(nome=form.nome.data).first()  # faz a query no banco de dados
+    senha = check_password_hash(usuario.senha, form.senha.data)  # checa se a senha corresponde
     proxima_pagina = request.form['proxima']
-    if usuario and senha:
-        session['usuario_logado'] = usuario.usuario
-        flash(usuario.usuario + 'logado com sucesso')
+    if usuario and senha:  # se usuario e senha estiverem corretos, segue o login
+        session['usuario_logado'] = usuario.nome
+        flash(usuario.nome + 'logado com sucesso')
         if proxima_pagina == 'None':
             proxima_pagina = url_for('index')
         return redirect(proxima_pagina)

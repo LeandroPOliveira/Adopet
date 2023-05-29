@@ -15,6 +15,7 @@
 #             print(err)
 #
 import sqlite3
+from flask_bcrypt import generate_password_hash
 
 conn = sqlite3.connect('adopet')
 
@@ -28,7 +29,7 @@ cursor = conn.cursor()
 
 # criando tabelas
 TABLES = {}
-TABLES['Pets'] = ('''
+TABLES['pets'] = ('''
       CREATE TABLE 'pets' (
       'id' integer PRIMARY KEY AUTOINCREMENT,
       'nome' varchar(50) NOT NULL,
@@ -37,9 +38,9 @@ TABLES['Pets'] = ('''
       'descricao' varchar(40) NOT NULL,
       'localidade' varchar(40) NOT NULL);''')
 
-TABLES['Usuarios'] = ('''
+TABLES['usuarios'] = ('''
       CREATE TABLE 'usuarios' (
-      `usuario` varchar(20) PRIMARY KEY,
+      `nome` varchar(20) PRIMARY KEY,
       `senha` varchar(100) NOT NULL
       );''')
 
@@ -50,11 +51,11 @@ for tabela_nome in TABLES:
 
 
 # inserindo usuarios
-usuario_sql = 'INSERT INTO usuarios (usuario, senha) VALUES (?, ?)'
+usuario_sql = 'INSERT INTO usuarios (nome, senha) VALUES (?, ?)'
 usuarios = [
-      ("admin", "123456"),
-      ("leandro", "teste"),
-      ("erika", "bagual")
+      ("admin", generate_password_hash("123456")),
+      ("leandro", generate_password_hash("teste")),
+      ("erika", generate_password_hash("bagual"))
 ]
 
 cursor.executemany(usuario_sql, usuarios)

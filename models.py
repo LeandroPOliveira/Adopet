@@ -14,8 +14,8 @@ class Pets(db.Model):
 
 
 class Usuarios(db.Model):
-    usuario = db.Column(db.String(20), primary_key=True)
+    nome = db.Column(db.String(20), primary_key=True)
     senha = db.Column(db.String(100), nullable=False)
 
     def __repr__(self):
-        return '<Name %r>' % self.name
+        return '<Name %r>' % self.nome

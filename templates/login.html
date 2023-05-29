@@ -1,7 +1,7 @@
 {% extends 'template.html' %}
 {% block conteudo %}
 
-        <main onload="alterarCss()">
+        <main>
             {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <ul id="messages" class="list-unstyled">
@@ -18,8 +18,8 @@
                 <input type="hidden" name="proxima" value="{{ proxima }}">
                 {{ form.csrf_token() }}
                 <div class="formulario">
-                    {{ form.usuario.label(class="form-label") }}
-                    {{ form.usuario(class="form-control") }}
+                    {{ form.nome.label(class="form-label") }}
+                    {{ form.nome(class="form-control") }}
                 </div>
                 <div class="formulario form-senha">
                     {{ form.senha.label(class="form-label") }}
