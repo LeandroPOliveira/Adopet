@@ -5,8 +5,13 @@ from wtforms import StringField, PasswordField, SubmitField, validators
 
 
 class FormularioUsuario(FlaskForm):  # validar inputs do formulario
+    email = StringField('Email', [validators.DataRequired(), validators.Length(min=1, max=40)])
     nome = StringField('Usuario',  [validators.DataRequired(), validators.Length(min=1, max=8)])
     senha = PasswordField('Senha', [validators.DataRequired(), validators.Length(min=1, max=100)])
+    conf_senha = PasswordField('Senha', [validators.DataRequired(), validators.Length(min=1, max=100)])
+    telefone = StringField('Telefone',  [validators.DataRequired(), validators.Length(min=1, max=20)])
+    cidade = StringField('Cidade', [validators.DataRequired(), validators.Length(min=1, max=40)])
+    sobre = StringField('Sobre', [validators.DataRequired(), validators.Length(min=1, max=100)])
     login = SubmitField('Login')
 
 

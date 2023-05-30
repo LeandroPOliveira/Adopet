@@ -51,11 +51,15 @@ for tabela_nome in TABLES:
 
 
 # inserindo usuarios
-usuario_sql = 'INSERT INTO usuarios (nome, senha) VALUES (?, ?)'
+usuario_sql = 'INSERT INTO usuarios (email, senha, nome, telefone, cidade, sobre) VALUES (?, ?)'
 usuarios = [
-      ("admin", generate_password_hash("123456")),
-      ("leandro", generate_password_hash("teste")),
-      ("erika", generate_password_hash("bagual"))
+      ('admin@hotmail.com', generate_password_hash("123456"), "admin", '169999-0000', 'Batatais',
+       'Lorem ipsum quos atque'),
+      ('leandron@hotmail.com', generate_password_hash("teste"), "Leandro", '169999-1111', 'Araraquara',
+       'Lorem ipsum quos atque1'),
+      ('erika@hotmail.com', generate_password_hash("bagual"), "Erika", '169999-2222', 'Batatais',
+       'Lorem ipsum quos atque2'),
+
 ]
 
 cursor.executemany(usuario_sql, usuarios)
@@ -70,7 +74,13 @@ pets_sql = 'INSERT INTO pets (nome, idade, porte, descricao, localidade) VALUES 
 pets = [
       ('Dunga', '2 anos', 'Porte pequeno', 'Calmo e educado', 'Rio de Janeiro (RJ)'),
       ('Felícia', '3 meses', 'Porte pequeno', 'Ativa e carinhosa', 'Nova Iguaçu (RJ)'),
-      ('Sirius', '6 meses', 'Porte Grande', 'Ativo e educado', 'Duque de Caxias (RJ)'),
+      ('Sirius', '6 meses', 'Porte grande', 'Ativo e educado', 'Duque de Caxias (RJ)'),
+      ('Fiona', '3 anos', 'Porte pequeno', 'Calma e carinhosa', 'São Gonçalo (RJ)'),
+      ('Sid', '8 meses', 'Porte médio/grande', 'Brincalhão e amável', 'Rio de Janeiro (RJ)'),
+('Yoda', '1 ano', 'Porte médio', 'Ativo e carinhoso', 'Nova Iguaçu (RJ)'),
+('Lua', '6 meses', 'Porte médio', 'Ativa e carinhosa', 'Duque de Caxias (RJ)'),
+('Amora', '45 dias', 'Porte grande', 'Calma e carinhosa', 'São Gonçalo (RJ)'),
+('Zelda', '5 meses', 'Porte médio', 'Ativa e amável', 'Rio de Janeiro (RJ)'),
 ]
 cursor.executemany(pets_sql, pets)
 

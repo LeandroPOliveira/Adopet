@@ -1,139 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel='stylesheet' href='./css/reset.css'>
-    <link rel='stylesheet' href='normalize.css'>
-    <link rel='stylesheet' href="./css/cabecalho.css">
-    <link rel='stylesheet' href="./css/rodape.css">
-    <link rel='stylesheet' href="./css/home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-
-</head>
-<body>
-    <header>
-        <div class="cabecalho">
-            <ul class="icones">
-                <li><img class="icone logotipo" src='./img/Logo.svg' alt="Logo adopet"></li>
-                <li><a href="home.html"><img class="icone figuras " src='./img/Casa.svg' alt="Link pagina inicial"></li></a>
-                <li><a href="mensagem.html"><img class="icone figuras" src='./img/Mensagens.svg' alt="Link enviar mensagem"></a></li>
-            </ul>
-            <img class="cabecalho__usuario" src="./img/Usuário.png" alt="Foto do usuário cadastrado">
-        </div>
-    </header>
+{% extends 'template.html' %}
+{% block conteudo %}
     <main>
         <h1 class="mensagem">Olá!<br> Veja os amigos disponíveis para adoção!</h1>
         <section>
             <div class='container'>
+                {% for pet in pets %}
                 <div class="ficha-animal">
-                    <img class='animal' src="./img/Animais_-_Dunga.png" alt="Cachorro Dunga">
+                    <img class='animal' src="../uploads/capa{{pet.id}}.png" alt="{{pet.nome}}">
                     <div class="descricao">                    
-                        <p class="descricao__dados">Dunga</p>
-                        <p class="descricao__dados">2 anos</p>
-                        <p class="descricao__dados">Porte pequeno</p>
-                        <p class="descricao__dados">Calmo e educado</p>
-                        <p class="descricao__dados">Rio de Janeiro (RJ)</p>
+                        <p class="descricao__dados">{{pet.nome}}</p>
+                        <p class="descricao__dados">{{pet.idade}}</p>
+                        <p class="descricao__dados">{{pet.porte}}</p>
+                        <p class="descricao__dados">{{pet.descricao}}</p>
+                        <p class="descricao__dados">{{pet.localidade}}</p>
                         <p class="descricao__dados">Falar com responsável</p>
                     </div>
                 </div>
-                <div class='ficha-animal'>
-                    <img class='animal' src="./img/Animais_-_Felícia.png" alt="Gata Felicia">
-                    <div class="descricao">                    
-                        <p class="descricao__dados">Felícia</p>
-                        <p class="descricao__dados">3 meses</p>
-                        <p class="descricao__dados">Porte pequeno</p>
-                        <p class="descricao__dados">Ativa e carinhosa</p>
-                        <p class="descricao__dados">Nova Iguaçu (RJ)</p>
-                        <p class="descricao__dados">Falar com responsável</p>
-                    </div>
-                </div>
-                <div class='ficha-animal'>
-                    <img class='animal' src="./img/Animais_-_Sirius.png" alt="Cachorro Sirius">
-                    <div class="descricao">                    
-                        <p class="descricao__dados">Sirius</p>
-                        <p class="descricao__dados">6 meses</p>
-                        <p class="descricao__dados">Porte grande</p>
-                        <p class="descricao__dados">Ativo e educado</p>
-                        <p class="descricao__dados">Duque de Caxias (RJ)</p>
-                        <p class="descricao__dados">Falar com responsável</p>
-                    </div>
-                </div>
-                <div class='ficha-animal'>
-                    <img class='animal' src="./img/Animais_-_Fiona.png" alt="Cachorra Fiona">
-                    <div class="descricao">                    
-                        <p class="descricao__dados">Fiona</p>
-                        <p class="descricao__dados">3 anos</p>
-                        <p class="descricao__dados">Porte pequeno</p>
-                        <p class="descricao__dados">Calma e carinhosa</p>
-                        <p class="descricao__dados">São Gonçalo (RJ)</p>
-                        <p class="descricao__dados">Falar com responsável</p>
-                    </div>
-                </div>
-                <div class="ficha-animal">
-                    <img class='animal' src="./img/Animais_-_Sid.png" alt="Cachorro Sid">
-                    <div class="descricao">                    
-                        <p class="descricao__dados">Sid</p>
-                        <p class="descricao__dados">8 meses</p>
-                        <p class="descricao__dados">Porte médio/grande</p>
-                        <p class="descricao__dados">Brincalhão e amável</p>
-                        <p class="descricao__dados">Rio de Janeiro (RJ)</p>
-                        <p class="descricao__dados">Falar com responsável</p>
-                    </div>
-                </div>
-                <div class='ficha-animal'>
-                    <img class='animal' src="./img/Animais_-_Yoda.png" alt="Gato Yoda">
-                    <div class="descricao">                    
-                        <p class="descricao__dados">Yoda</p>
-                        <p class="descricao__dados">1 ano</p>
-                        <p class="descricao__dados">Porte médio</p>
-                        <p class="descricao__dados">Ativo e carinhoso</p>
-                        <p class="descricao__dados">Nova Iguaçu (RJ)</p>
-                        <p class="descricao__dados">Falar com responsável</p>
-                    </div>
-                </div>
-                <div class='ficha-animal'>
-                    <img class='animal' src="./img/Animais_-_Lua.png" alt="Gata Lua">
-                    <div class="descricao">                    
-                        <p class="descricao__dados">Lua</p>
-                        <p class="descricao__dados">6 meses</p>
-                        <p class="descricao__dados">Porte médio</p>
-                        <p class="descricao__dados">Ativa e carinhosa</p>
-                        <p class="descricao__dados">Duque de Caxias (RJ)</p>
-                        <p class="descricao__dados">Falar com responsável</p>
-                    </div>
-                </div>
-                <div class='ficha-animal'>
-                    <img class='animal' src="./img/Animais_-_Amora.png" alt="Cachorra Amora">
-                    <div class="descricao">                    
-                        <p class="descricao__dados">Amora</p>
-                        <p class="descricao__dados">45 dias</p>
-                        <p class="descricao__dados">Porte grande</p>
-                        <p class="descricao__dados">Calma e carinhosa</p>
-                        <p class="descricao__dados">São Gonçalo (RJ)</p>
-                        <p class="descricao__dados">Falar com responsável</p>
-                    </div>
-                </div>
-                <div class='ficha-animal'>
-                    <img class='animal' src="./img/Animais_-_Zelda.png" alt="Gata Zelda">
-                    <div class="descricao">                    
-                        <p class="descricao__dados">Zelda</p>
-                        <p class="descricao__dados">5 meses</p>
-                        <p class="descricao__dados">Porte médio</p>
-                        <p class="descricao__dados">Ativa e amável</p>
-                        <p class="descricao__dados">Rio de Janeiro (RJ)</p>
-                        <p class="descricao__dados">Falar com responsável</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </section>
     </main>
-    <footer>
-        <p id="rodape">2022 - Desenvolvido por Alura</p>
-    </footer>
-</body>
-</html>
+{% endblock %}

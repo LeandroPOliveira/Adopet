@@ -4,24 +4,26 @@
         <main>
             <img class="logo-azul" src='./img/Logo_-_azul.svg' alt="Logo Adopet">
             <h1 class='boas-vindas'>Ainda não tem cadastro?<br>Então antes de buscar seu melhor amigo, precisamos de alguns dados:</h1>
-            <form>
+            <form action="{{ url_for('criar') }}" method="post" enctype="multipart/form-data">
                 <div class="formulario">
-                    <label for="nome">Nome</label>
-                    <input type="text" id='nome' placeholder="Digite seu nome Completo">
+                    {{ form.nome.label() }}
+                    {{ form.nome(placeholder="Digite seu nome Completo") }}
+
                 </div>
                 <div class="formulario">
-                    <label for="email">Email</label>
-                    <input type="text" id='email' placeholder="Digite seu melhor email">
+                    {{ form.email.label() }}
+                    {{ form.email(placeholder="Digite seu melhor email") }}
                 </div>
                 <div class="formulario form-senha">
-                    <label for="senha">Senha</label>
-                    <input type="text" id='senha' placeholder="Crie uma senha">
+                    {{ form.senha.label() }}
+                    {{ form.senha(placeholder="Crie uma senha") }}
                 </div>
                 <div class="formulario form-senha">
-                    <label for="confirma-senha">Confirme sua senha</label>
-                    <input type="text" id='confirma-senha' placeholder="Repita a senha criada">
+                    {{ form.conf_senha.label() }}
+                    {{ form.conf_senha(placeholder="Repita a senha criada") }}
                 </div>
                 <div class="formulario form-botao">
+
                     <button>Cadastrar!</button>
                 </div>
             </form>
