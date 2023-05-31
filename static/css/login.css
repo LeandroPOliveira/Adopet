@@ -12,7 +12,7 @@
     color: #3772FF;
 }
 
-.formulario {
+.formulario-login {
     display: flex;
     flex-flow: column wrap;
     text-align: center;
@@ -21,15 +21,15 @@
 }
 
 
-label {
+.label-login {
     font-size: 1.2rem;
     color: #737380;
     margin-bottom: 0.5em;
 }
 
-input {
+.input-login {
     font-size: 1rem;
-    color: #edebeb;
+    color: black;
     text-align: center;
     padding: 0.8rem 0.5rem 0.8rem 0.5rem;
     border: none;
@@ -43,7 +43,8 @@ input {
     color: lightgrey;
 }
 
-button {
+.botao-login {
+    text-align: center;
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 4px;
@@ -65,11 +66,11 @@ button {
         margin: 0 6rem;
     }
     
-    .formulario {
+    .formulario-login {
         margin: 2rem 0;
     }
     
-    input {
+    .input-login {
         width: 45%;
     }
     
@@ -77,7 +78,7 @@ button {
         color: lightgrey;
     }
     
-    button {
+    .botao-login {
         margin: 1rem 1rem 18rem;
         width: 25%;
         font-size: 1.2rem;
@@ -90,11 +91,11 @@ button {
         width: 290px;
     }
     
-    .formulario {
+    .formulario-login {
         margin: 2rem 0;
     }
     
-    input {
+    .input-login {
         width: 40%;
     }
     
@@ -102,13 +103,13 @@ button {
         color: lightgrey;
     }
     
-    button {
+    .botao-login {
         margin: 1rem 1rem 20rem;
         width: 15%;
         font-size: 1.2rem;
     }
     
-    #senha, #confirma-senha {
+    .senha-login {
         width: 25%;
    
     }

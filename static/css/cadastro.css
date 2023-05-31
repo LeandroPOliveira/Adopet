@@ -14,7 +14,7 @@
     color: #3772FF;
 }
 
-.formulario {
+.formulario-cadastro {
     display: flex;
     flex-flow: column wrap;
     text-align: center;
@@ -23,15 +23,15 @@
 }
 
 
-label {
+.label-cadastro {
     font-size: 1.2rem;
     color: #737380;
     margin-bottom: 0.5em;
 }
 
-input {
+.input-cadastro {
     font-size: 1rem;
-    color: #edebeb;
+    color: black;
     text-align: center;
     padding: 0.8rem 0.5rem 0.8rem 0.5rem;
     border: none;
@@ -45,7 +45,7 @@ input {
     color: lightgrey;
 }
 
-button {
+.botao-cadastro {
     font-size: 1rem;
     font-weight: 500;
     border-radius: 4px;
@@ -68,11 +68,11 @@ button {
         margin: 0 8rem;
     }
     
-    .formulario {
+    .formulario-cadastro {
         margin: 2rem 0;
     }
     
-    input {
+    .input-cadastro {
         width: 45%;
     }
     
@@ -80,7 +80,7 @@ button {
         color: lightgrey;
     }
     
-    button {
+    .botao-cadastro {
         margin: 1rem 1rem 6rem;
         width: 30%;
         font-size: 1.2rem;
@@ -97,11 +97,11 @@ button {
         margin: 0 30rem;
     }
 
-    .formulario {
+    .formulario-cadastro {
         margin: 2rem 0;
     }
     
-    input {
+    .input-cadastro {
         width: 40%;
     }
     
@@ -109,13 +109,13 @@ button {
         color: lightgrey;
     }
     
-    button {
+    .botao-cadastro {
         margin: 1rem 1rem 6rem;
         width: 15%;
         font-size: 1.2rem;
     }
     
-    #senha, #confirma-senha {
+    .senha {
         width: 20%;
    
     }

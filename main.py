@@ -14,4 +14,4 @@ from views_pet import *
 from views_user import *
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

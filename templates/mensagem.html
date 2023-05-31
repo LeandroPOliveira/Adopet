@@ -1,55 +1,29 @@
-<!DOCTYPE html>
-<html lang='pt-br'>
-    <head>
-        <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>Adopet - Mensagem</title>
-        <link rel='stylesheet' href='./css/reset.css'>
-        <link rel='stylesheet' href='./css/normalize.css'>
-        <link rel='stylesheet' href="./css/cabecalho.css">
-        <link rel='stylesheet' href="./css/rodape.css">
-        <link rel='stylesheet' href="./css/mensagem.css">
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    
-    <body> 
-        <header>
-            <div class="cabecalho">
-                <ul class="icones">
-                    <li><img class="icone logotipo" src='./img/Logo.svg'></li>
-                    <li><a href="home.html"><img class="icone figuras " src='./img/Casa.svg'></li></a>
-                    <li><a href="mensagem.html"><img class="icone figuras" src='./img/Mensagens.svg'></a></li>
-                </ul>
-                <img class="cabecalho__usuario" src="./img/Usuário.png" alt="">
-            </div>
-        </header>
-        <main>
-            <h1 class="mensagem">Envie uma mensagem para a pessoa ou instituição que está cuidando do animal:</h1>
-            <form class="formulario">
-                <div class="formulario__item">
-                    <label for="nome">Nome</label>
-                    <input type="text" id='nome' placeholder="Insira seu nome completo">
-                </div>
-                <div class="formulario__item">
-                    <label for="telefone">Telefone</label>
-                    <input type="text" id='telefone' placeholder="Insira seu telefone e/ou whatsapp">
-                </div>
-                <div class="formulario__item">
-                    <label for="animal">Nome do animal</label>
-                    <input type="text" id='animal' placeholder="Por qual animal você se interessou?">
-                </div>
-                <div class="formulario__item formulario__mensagem">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea type="text" rows="7" id='mensagem' placeholder="Escreva sua mensagem"></textarea>
-                </div>
-                <div class="formulario__item form-botao">
-                    <button>Enviar</button>
-                </div>
-            </form>
-        </main>
-        <footer>
-            <p>2022 - Desenvolvido por Alura</p>
-        </footer>
-    </body>
+{% extends 'template.html' %}
+{% block conteudo %}
 
-</html>
+<main>
+    <h1 class="mensagem">Envie uma mensagem para a pessoa ou instituição que está cuidando do animal:</h1>
+    <form class="formulario">
+        <div class="formulario__item">
+            <label for="nome">Nome</label>
+            <input type="text" id='nome' placeholder="Insira seu nome completo">
+        </div>
+        <div class="formulario__item">
+            <label for="telefone">Telefone</label>
+            <input type="text" id='telefone' placeholder="Insira seu telefone e/ou whatsapp">
+        </div>
+        <div class="formulario__item">
+            <label for="animal">Nome do animal</label>
+            <input type="text" id='animal' placeholder="Por qual animal você se interessou?">
+        </div>
+        <div class="formulario__item formulario__mensagem">
+            <label for="mensagem">Mensagem</label>
+            <textarea type="text" rows="7" id='mensagem' placeholder="Escreva sua mensagem"></textarea>
+        </div>
+        <div class="formulario__item form-botao">
+            <button>Enviar</button>
+        </div>
+    </form>
+</main>
+
+{% endblock %}

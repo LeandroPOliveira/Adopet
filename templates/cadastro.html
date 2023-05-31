@@ -1,32 +1,42 @@
 {% extends 'template.html' %}
 {% block conteudo %}
 
-        <main>
-            <img class="logo-azul" src='./img/Logo_-_azul.svg' alt="Logo Adopet">
-            <h1 class='boas-vindas'>Ainda não tem cadastro?<br>Então antes de buscar seu melhor amigo, precisamos de alguns dados:</h1>
-            <form action="{{ url_for('criar') }}" method="post" enctype="multipart/form-data">
-                <div class="formulario">
-                    {{ form.nome.label() }}
-                    {{ form.nome(placeholder="Digite seu nome Completo") }}
+<main>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul id="messages" class="list-unstyled">
+        {% for message in messages %}
+        <li class="alert alert-success">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <img class="logo-azul" src="{{ url_for('static', filename='img/Logo_-_Azul.svg') }}" alt="Logo Adopet">
+    <h1 class='boas-vindas'>Ainda não tem cadastro?<br>Então antes de buscar seu melhor amigo, precisamos de alguns
+        dados:</h1>
+    <form action="{{ url_for('criar') }}" method="post" enctype="multipart/form-data">
+        {{ form.csrf_token() }}
+        <div class="formulario-cadastro">
+            {{ form.nome.label() }}
+            {{ form.nome(class="input-cadastro", placeholder="Digite seu nome Completo") }}
 
-                </div>
-                <div class="formulario">
-                    {{ form.email.label() }}
-                    {{ form.email(placeholder="Digite seu melhor email") }}
-                </div>
-                <div class="formulario form-senha">
-                    {{ form.senha.label() }}
-                    {{ form.senha(placeholder="Crie uma senha") }}
-                </div>
-                <div class="formulario form-senha">
-                    {{ form.conf_senha.label() }}
-                    {{ form.conf_senha(placeholder="Repita a senha criada") }}
-                </div>
-                <div class="formulario form-botao">
+        </div>
+        <div class="formulario-cadastro">
+            {{ form.email.label(class="label-cadastro") }}
+            {{ form.email(class="input-cadastro", placeholder="Digite seu melhor email") }}
+        </div>
+        <div class="formulario-cadastro form-senha">
+            {{ form.senha.label(class="label-cadastro") }}
+            {{ form.senha(class="input-cadastro senha", placeholder="Crie uma senha") }}
+        </div>
+        <div class="formulario-cadastro form-senha">
+            {{ form.conf_senha.label(class="label-cadastro") }}
+            {{ form.conf_senha(class="input-cadastro senha", placeholder="Repita a senha criada") }}
+        </div>
+        <div class="formulario-cadastro form-botao">
+            {{ form.cadastro(class="botao-cadastro") }}
+        </div>
+    </form>
+</main>
 
-                    <button>Cadastrar!</button>
-                </div>
-            </form>
-        </main>
-
-   {% endblock %}
+{% endblock %}

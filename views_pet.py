@@ -21,3 +21,9 @@ def home():
 
     form = FormularioPet()
     return render_template('home.html', titulo='Home', form=form, pets=lista)
+
+
+@app.route('/mensagem')
+def mensagem():
+    estilo_home = 'css/home.css'
+    return render_template('mensagem.html', titulo='Adopet', estilo=estilo_home)

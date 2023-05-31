@@ -41,8 +41,10 @@ def cadastro():
 @app.route('/criar', methods=['POST', ])
 def criar():
     form = FormularioUsuario(request.form)
-
+    print(form.email.data)
+    print(form.email)
     if not form.validate_on_submit():
+        flash('Erro!')
         return redirect(url_for('cadastro'))
 
     email = form.email.data
