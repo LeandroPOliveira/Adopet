@@ -19,8 +19,8 @@
         <header>
             <ul class="icones">
                 <li><img class="icone logotipo" src="{{ url_for('static', filename='img/Logo.svg') }}"></li>
-                <li><a href="home.html"><img class="icone figuras " src="{{ url_for('static', filename='img/Casa.svg') }}"></a></li>
-                <li><a href="mensagem.html"><img class="icone figuras" src="{{ url_for('static', filename='img/Mensagens.svg') }}"></a></li>
+                <li><a href={{url_for('home')}}><img class="icone figuras " src="{{ url_for('static', filename='img/Casa.svg') }}"></a></li>
+                <li><a href={{url_for('mensagem')}}><img class="icone figuras" src="{{ url_for('static', filename='img/Mensagens.svg') }}"></a></li>
             </ul>
         </header>
 

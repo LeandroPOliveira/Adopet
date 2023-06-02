@@ -50,7 +50,7 @@ def criar():
     email = form.email.data
     nome = form.nome.data
     senha = form.senha.data
-    conf_senha = form.conf_senha.senha
+    conf_senha = form.conf_senha.data
 
     usuario = Usuarios.query.filter_by(email=email).first()
 

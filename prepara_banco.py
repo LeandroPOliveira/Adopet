@@ -40,8 +40,12 @@ TABLES['pets'] = ('''
 
 TABLES['usuarios'] = ('''
       CREATE TABLE 'usuarios' (
-      `nome` varchar(20) PRIMARY KEY,
-      `senha` varchar(100) NOT NULL
+      'email' varchar(60) PRIMARY KEY,
+      `senha` varchar(20) NOT NULL,
+      `nome` varchar(20),
+      'telefone' varchar(20),
+      'cidade' varchar(40),
+      'sobre' varchar(100)
       );''')
 
 for tabela_nome in TABLES:
@@ -51,7 +55,7 @@ for tabela_nome in TABLES:
 
 
 # inserindo usuarios
-usuario_sql = 'INSERT INTO usuarios (email, senha, nome, telefone, cidade, sobre) VALUES (?, ?)'
+usuario_sql = 'INSERT INTO usuarios (email, senha, nome, telefone, cidade, sobre) VALUES (?, ?, ?, ?, ?, ?)'
 usuarios = [
       ('admin@hotmail.com', generate_password_hash("123456"), "admin", '169999-0000', 'Batatais',
        'Lorem ipsum quos atque'),

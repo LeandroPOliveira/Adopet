@@ -14,8 +14,12 @@ class Pets(db.Model):
 
 
 class Usuarios(db.Model):
+    email = db.Column(db.String(60), primary_key=False)
     nome = db.Column(db.String(20), primary_key=True)
-    senha = db.Column(db.String(100), nullable=False)
+    senha = db.Column(db.String(20), nullable=False)
+    telefone = db.Column(db.String(20), nullable=False)
+    cidade = db.Column(db.String(40), nullable=False)
+    sobre = db.Column(db.String(100), nullable=False)
 
     def __repr__(self):
         return '<Name %r>' % self.nome
