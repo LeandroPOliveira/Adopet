@@ -1,0 +1,12 @@
+
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/Flask.iml
+.idea/workspace.xml
+__pycache__/helpers.cpython-39.pyc
+__pycache__/main.cpython-39.pyc
+__pycache__/models.cpython-39.pyc
+__pycache__/views_pet.cpython-39.pyc
+__pycache__/views_user.cpython-39.pyc

@@ -10,7 +10,7 @@ def login():
     proxima = request.args.get('proxima')
     form = FormularioUsuario()
     estilo_login = 'css/login.css'
-    return render_template('login.html', titulo='Login', estilo=estilo_login, form=form)
+    return render_template('login.html', titulo='Login', estilo=estilo_login, form=form, proxima=proxima)
 
 
 @app.route('/autenticar', methods=['POST', ])
