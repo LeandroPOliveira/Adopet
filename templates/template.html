@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
-    <head>
-        <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>{{ titulo }}</title>
-        <link rel='stylesheet' href="{{ url_for('static', filename='css/reset.css') }}">
-        <link rel='stylesheet' href="{{ url_for('static', filename='css/cabecalho.css') }}">
-        <link rel='stylesheet' href="{{ url_for('static', filename='css/rodape.css') }}">
-        <link rel='stylesheet' href="{{ url_for('static', filename=estilo) }}">
-        <link rel='stylesheet' href="{{ url_for('static', filename='css/cadastro.css') }}">
-        <link rel='stylesheet' href="{{ url_for('static', filename='css/home.css') }}">
-        <link rel='stylesheet' href="{{ url_for('static', filename='css/perfil.css') }}">
-        <link rel='stylesheet' href="{{ url_for('static', filename='css/mensagem.css') }}">
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
 
-    <body>
-        <header>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>{{ titulo }}</title>
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/cabecalho.css') }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/rodape.css') }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename=estilo) }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/cadastro.css') }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/perfil.css') }}">
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/mensagem.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav-itens">
             <ul class="icones">
                 <li><img class="icone logotipo" src="{{ url_for('static', filename='img/Logo.svg') }}"></li>
-                <li><a href={{url_for('home')}}><img class="icone figuras " src="{{ url_for('static', filename='img/Casa.svg') }}"></a></li>
-                <li><a href={{url_for('mensagem')}}><img class="icone figuras" src="{{ url_for('static', filename='img/Mensagens.svg') }}"></a></li>
+                <li><a href={{url_for('home')}}><img class="icone figuras "
+                            src="{{ url_for('static', filename='img/Casa.svg') }}"></a></li>
+                <li><a href={{url_for('mensagem')}}><img class="icone figuras"
+                            src="{{ url_for('static', filename='img/Mensagens.svg') }}"></a></li>
             </ul>
-        </header>
+            <img style="visibility:{{ visibility }}" src="{{ url_for('static', filename='img/Usuário.png') }}" alt="Foto perfil usuário padrão">
+        </div>
+
+    </header>
 
     {% block conteudo %} {% endblock %}
 
     <footer>
-            <p id="rodape">2022 - Desenvolvido por Leandro Oliveira</p>
-        </footer>
-    </body>
+        <p id="rodape">2022 - Desenvolvido por Leandro Oliveira</p>
+    </footer>
+</body>
 
 </html>

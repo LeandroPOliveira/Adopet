@@ -26,11 +26,17 @@ body {
     display: none;
 }
 
-.icones {
+.nav-itens {
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: space-between;
     align-items: center;
+    margin-right: 2.5rem;
+}
+
+.icones {
+    display: flex;
+
 }
 
 .icone {

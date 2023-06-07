@@ -10,7 +10,7 @@ def login():
     proxima = request.args.get('proxima')
     form = FormularioUsuario()
     estilo_login = 'css/login.css'
-    return render_template('login.html', titulo='Login', estilo=estilo_login, form=form, proxima=proxima)
+    return render_template('login.html', titulo='Login', estilo=estilo_login, form=form, proxima=proxima, visibility='hidden')
 
 
 @app.route('/autenticar', methods=['POST', ])
@@ -35,7 +35,7 @@ def cadastro():
     # if 'usuario_logado' not in session or session['usuario_logado'] == None:
     #     return redirect(url_for('login', proxima=url_for('novo')))
     form = FormularioUsuario()
-    return render_template('cadastro.html', titulo='Novo Usuário', form=form)
+    return render_template('cadastro.html', titulo='Novo Usuário', form=form, visibility='hidden')
 
 
 @app.route('/criar', methods=['POST', ])
@@ -72,3 +72,4 @@ def criar():
     # arquivo.save(f'{upload_path}/capa{nova_bike.id}-{timestamp}.jpg')
 
     return redirect(url_for('home'))
+

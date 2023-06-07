@@ -8,14 +8,14 @@ from helpers import FormularioPet
 @app.route('/')
 def index():
     estilo_home = 'css/index.css'
-    return render_template('index.html', titulo='Adopet', estilo=estilo_home)
+    return render_template('index.html', titulo='Adopet', estilo=estilo_home, visibility='hidden')
 
 
 @app.route('/home')
 def home():
     estilo_home = 'css/home.css'
     if 'usuario_logado' not in session or session['usuario_logado'] is None:
-        return redirect(url_for('login', proxima=url_for('home'), estilo=estilo_home))
+        return redirect(url_for('login', proxima=url_for('home'), estilo=estilo_home, visibility='visible'))
 
     lista = Pets.query.order_by(Pets.id)
 
@@ -26,4 +26,4 @@ def home():
 @app.route('/mensagem')
 def mensagem():
     estilo_home = 'css/home.css'
-    return render_template('mensagem.html', titulo='Adopet', estilo=estilo_home)
+    return render_template('mensagem.html', titulo='Adopet', estilo=estilo_home, visibility='visible')
