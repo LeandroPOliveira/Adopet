@@ -11,23 +11,23 @@
                 <p class="desc-foto">Clique na foto para editar</a>
             </div>
             <div class="formulario__item">
-                <label for="nome">Nome</label>
-                <input type="text" id='nome' placeholder="Leandro">
+                {{ form.nome.label(class="label-perfil") }}
+                {{ form.nome(class="input-perfil", placeholder="Digite seu nome Completo") }}
             </div>
             <div class="formulario__item">
-                <label for="telefone">Telefone</label>
-                <input type="text" id='telefone' placeholder="55 11 XXXXXXXXX">
+                {{ form.telefone.label(class="label-perfil") }}
+                {{ form.telefone(class="input-perfil", placeholder="Insira seu telefone e/ou whatsapp") }}
             </div>
             <div class="formulario__item">
-                <label for="cidade">Cidade</label>
-                <input type="text" id='cidade' placeholder="São Paulo">
+                {{ form.cidade.label(class="label-perfil") }}
+                {{ form.cidade(class="input-perfil", placeholder="Digite sua cidade") }}
             </div>
             <div class="formulario__item sobre">
-                <label for="sobre">Sobre</label>
-                <textarea type="text" rows="5" id='sobre' placeholder="Lorem ipsum"></textarea>
+                {{ form.sobre.label(class="label-perfil") }}
+                {{ form.sobre(rows="5", class="textarea-perfil", placeholder="Fale sobre você") }}
             </div>
             <div class="formulario__item form-botao">
-                <button>Salvar</button>
+                {{ form.salvar(class="botao-perfil") }}
             </div>
         </form>
     </main>

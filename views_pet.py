@@ -1,6 +1,6 @@
 from main import app
 from flask import render_template
-from models import Pets
+from models import Pets, Usuarios
 from flask import render_template, request, redirect, session, flash, url_for
 from helpers import FormularioPet
 
@@ -18,6 +18,7 @@ def home():
         return redirect(url_for('login', proxima=url_for('home'), estilo=estilo_home, visibility='visible'))
 
     lista = Pets.query.order_by(Pets.id)
+    usuario = Usuarios.query.filter_by(id=id).first()
 
     form = FormularioPet()
     return render_template('home.html', titulo='Home', form=form, pets=lista)

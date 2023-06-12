@@ -32,11 +32,11 @@ body {
     margin: 2rem 0;
 }
 
-#sobre {
+.textarea-perfil {
     height: 10rem;
 }
 
-label, .n-foto {
+.label-perfil, .n-foto {
     font-size: 1.2rem;
     font-weight: 600;
     color: #3772FF;
@@ -48,7 +48,7 @@ label, .n-foto {
     color: lightcoral;
 }
 
-input, textarea {
+.input-perfil, .textarea-perfil {
     font-size: 1rem;
     text-align: left;
     padding: 0.8rem 0.5rem 0.8rem 0.5rem;
@@ -62,7 +62,7 @@ input, textarea {
     color: lightgray;
 }
 
-button {
+.botao-perfil {
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 4px;

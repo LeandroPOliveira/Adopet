@@ -1,6 +1,6 @@
 from main import app, db
 from flask import render_template, request, url_for, session, flash, redirect
-from helpers import FormularioUsuario
+from helpers import FormularioUsuario, FormularioPerfil
 from models import Usuarios
 from flask_bcrypt import check_password_hash, generate_password_hash
 
@@ -73,3 +73,31 @@ def criar():
 
     return redirect(url_for('home'))
 
+
+@app.route('/perfil/<int:id>')
+def perfil(id):
+    if 'usuario_logado' not in session or session['usuario_logado'] == None:
+        return redirect(url_for('login', proxima=url_for('perfil', id=id)))
+
+
+@app.route('/atualizar', methods=['POST', ])
+def atualizar():
+    form = FormularioPerfil(request.form)
+
+    if form.validate_on_submit():
+        perfil = Usuarios.query.filter_by(id=request.form['id']).first()
+        perfil.nome = form.nome.data
+        perfil.telefone = form.telefone.data
+        perfil.cidade = form.cidade.data
+        perfil.sobre = form.sobre.data
+
+        db.session.add(perfil)
+        db.session.commit()
+
+        arquivo = request.files['arquivo']
+        upload_path = app.config['UPLOAD_PATH']
+        # timestamp = time.time()
+        # deleta_arquivo(bike.id)
+        arquivo.save(f'{upload_path}/capa{perfil.id}.jpg')
+
+    return redirect(url_for('index'))
