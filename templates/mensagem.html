@@ -3,27 +3,39 @@
 
 <main>
     <h1 class="mensagem">Envie uma mensagem para a pessoa ou instituição que está cuidando do animal:</h1>
-    <form class="formulario">
+    <form action="{{ url_for('send') }}" method="post" class="formulario">
+        {{ form.csrf_token() }}
         <div class="formulario__item">
-            <label for="nome">Nome</label>
-            <input type="text" id='nome' placeholder="Insira seu nome completo">
+            {{ form.nome.label(class="label-mensagem") }}
+            {{ form.nome(class="input-mensagem", placeholder="Insira seu nome Completo") }}
         </div>
         <div class="formulario__item">
-            <label for="telefone">Telefone</label>
-            <input type="text" id='telefone' placeholder="Insira seu telefone e/ou whatsapp">
+            {{ form.telefone.label(class="label-mensagem") }}
+            {{ form.telefone(class="input-mensagem", placeholder="Insira seu telefone e/ou whatsapp") }}
         </div>
         <div class="formulario__item">
-            <label for="animal">Nome do animal</label>
-            <input type="text" id='animal' placeholder="Por qual animal você se interessou?">
+            {{ form.animal.label(class="label-mensagem") }}
+            {{ form.animal(class="input-mensagem", placeholder="Por qual animal você se interessou?") }}
         </div>
         <div class="formulario__item formulario__mensagem">
-            <label for="mensagem">Mensagem</label>
-            <textarea type="text" rows="7" id='mensagem' placeholder="Escreva sua mensagem"></textarea>
+            {{ form.mensagem.label(class="label-mensagem") }}
+            {{ form.mensagem(rows="7", class="textarea-mensagem", placeholder="Escreva sua mensagem") }}
         </div>
         <div class="formulario__item form-botao">
-            <button>Enviar</button>
+            {{ form.enviar(class="botao-mensagem") }}
         </div>
     </form>
+     {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div id="alerta" class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill"></i> {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
 </main>
 
 {% endblock %}

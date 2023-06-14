@@ -88,11 +88,11 @@ body {
         margin: 2rem 7rem;
     }
     
-    input, textarea {
+    .input-perfil, .textarea-perfil {
         width: 90%;
     }
     
-    button {
+    .botao-perfil {
         padding: 0.7rem;
         width: 30%;
     }
@@ -114,12 +114,12 @@ body {
         margin: 2rem 27rem;
     }
     
-    input, textarea {
+    .input-perfil, .textarea-perfil {
         width: 85%;
     }
  
     
-    button {
+    .botao-perfil {
         padding: 0.6rem;
         width: 30%;
     }

@@ -17,7 +17,7 @@
     <form action="{{ url_for('criar') }}" method="post" enctype="multipart/form-data">
         {{ form.csrf_token() }}
         <div class="formulario-cadastro">
-            {{ form.nome.label() }}
+            {{ form.nome.label(class="label-cadastro") }}
             {{ form.nome(class="input-cadastro", placeholder="Digite seu nome Completo") }}
 
         </div>

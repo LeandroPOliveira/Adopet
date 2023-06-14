@@ -31,3 +31,11 @@ class FormularioPet(FlaskForm):
     descricao = StringField('Descricao', [validators.DataRequired(), validators.Length(min=1, max=40)])
     localidade = StringField('Local', [validators.DataRequired(), validators.Length(min=1, max=40)])
     salvar = SubmitField('Salvar')
+
+
+class FormularioContato(FlaskForm):
+    nome = StringField('Nome', [validators.DataRequired(), validators.Length(min=1, max=50)])
+    telefone = StringField('Telefone', [validators.DataRequired(), validators.Length(min=1, max=50)])
+    animal = StringField('Animal', [validators.DataRequired(), validators.Length(min=1, max=50)])
+    mensagem = TextAreaField('Mensagem', [validators.DataRequired(), validators.Length(min=1, max=150)])
+    enviar = SubmitField('Enviar')
