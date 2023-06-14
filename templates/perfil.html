@@ -12,7 +12,7 @@
             </div>
             <div class="formulario__item">
                 {{ form.nome.label(class="label-perfil") }}
-                {{ form.nome(class="input-perfil", placeholder="Digite seu nome Completo") }}
+                {{ form.nome(class="input-perfil", placeholder=current_user.nome) }}
             </div>
             <div class="formulario__item">
                 {{ form.telefone.label(class="label-perfil") }}

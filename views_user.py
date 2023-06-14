@@ -74,10 +74,10 @@ def criar():
     return redirect(url_for('home'))
 
 
-@app.route('/perfil/<int:id>')
-def perfil(id):
+@app.route('/perfil')
+def perfil():
     if 'usuario_logado' not in session or session['usuario_logado'] == None:
-        return redirect(url_for('login', proxima=url_for('perfil', id=id)))
+        return redirect(url_for('login', proxima=url_for('perfil')))
 
 
 @app.route('/atualizar', methods=['POST', ])

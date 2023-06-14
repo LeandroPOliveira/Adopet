@@ -2,7 +2,8 @@ import os
 
 SECRET_KEY = 'botina'
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + r'C:\Users\loliveira\PycharmProjects\Flask\adopet'
+# SQLALCHEMY_DATABASE_URI = 'sqlite:///' + r'C:\Users\loliveira\PycharmProjects\Flask\adopet'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + r'C:\Users\leand\PycharmProjects\bikestore\Alura-Challenge\adopet'
 # '{SGBD}://{usuario}:{senha}@{servidor}/{database}'.format(
 # SGBD= 'mysql+mysqlconnector',
 # servidor = 'localhost',

@@ -1,7 +1,7 @@
 from main import app
 from flask import render_template
 from models import Pets, Usuarios
-from flask import render_template, request, redirect, session, flash, url_for
+from flask import render_template, request, redirect, session, flash, url_for, send_from_directory
 from helpers import FormularioPet
 
 
@@ -18,7 +18,7 @@ def home():
         return redirect(url_for('login', proxima=url_for('home'), estilo=estilo_home, visibility='visible'))
 
     lista = Pets.query.order_by(Pets.id)
-    usuario = Usuarios.query.filter_by(id=id).first()
+
 
     form = FormularioPet()
     return render_template('home.html', titulo='Home', form=form, pets=lista)
@@ -28,3 +28,8 @@ def home():
 def mensagem():
     estilo_home = 'css/home.css'
     return render_template('mensagem.html', titulo='Adopet', estilo=estilo_home, visibility='visible')
+
+
+@app.route('/uploads/<nome_arquivo>')
+def imagem(nome_arquivo):
+    return send_from_directory('uploads', nome_arquivo)
