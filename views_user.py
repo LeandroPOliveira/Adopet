@@ -3,7 +3,12 @@ from flask import render_template, request, url_for, session, flash, redirect
 from helpers import FormularioUsuario, FormularioPerfil
 from models import Usuarios
 from flask_bcrypt import check_password_hash, generate_password_hash
+from main import login_manager
 
+
+@login_manager.user_loader
+def load_user(user_id):
+    return Usuarios.query.get(int(user_id))
 
 @app.route('/login')
 def login():
@@ -78,6 +83,8 @@ def criar():
 def perfil():
     if 'usuario_logado' not in session or session['usuario_logado'] == None:
         return redirect(url_for('login', proxima=url_for('perfil')))
+    form = FormularioPerfil()
+    return render_template('perfil.html', titulo='Meu perfil', visibility='visible', form=form)
 
 
 @app.route('/atualizar', methods=['POST', ])

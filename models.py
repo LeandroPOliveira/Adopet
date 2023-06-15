@@ -1,5 +1,5 @@
 from main import db
-
+from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 
 class Pets(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -13,7 +13,8 @@ class Pets(db.Model):
         return '<Name %r>' % self.nome
 
 
-class Usuarios(db.Model):
+class Usuarios(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     email = db.Column(db.String(60), primary_key=False)
     nome = db.Column(db.String(20), primary_key=True)
     senha = db.Column(db.String(20), nullable=False)

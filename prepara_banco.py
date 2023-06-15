@@ -40,7 +40,8 @@ TABLES['pets'] = ('''
 
 TABLES['usuarios'] = ('''
       CREATE TABLE 'usuarios' (
-      'email' varchar(60) PRIMARY KEY,
+      'id' integer PRIMARY KEY AUTOINCREMENT,
+      'email' varchar(60),
       `senha` varchar(20) NOT NULL,
       `nome` varchar(20),
       'telefone' varchar(20),
