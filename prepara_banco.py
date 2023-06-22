@@ -42,8 +42,8 @@ TABLES['usuarios'] = ('''
       CREATE TABLE 'usuarios' (
       'id' integer PRIMARY KEY AUTOINCREMENT,
       'email' varchar(60),
-      `senha` varchar(20) NOT NULL,
-      `nome` varchar(20),
+      'senha' varchar(20) NOT NULL,
+      'nome' varchar(20),
       'telefone' varchar(20),
       'cidade' varchar(40),
       'sobre' varchar(100)

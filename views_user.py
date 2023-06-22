@@ -4,11 +4,13 @@ from helpers import FormularioUsuario, FormularioPerfil
 from models import Usuarios
 from flask_bcrypt import check_password_hash, generate_password_hash
 from main import login_manager
+from flask_login import login_user
 
 
 @login_manager.user_loader
-def load_user(user_id):
-    return Usuarios.query.get(int(user_id))
+def load_user(usuarios_id):
+    return Usuarios.query.get(int(usuarios_id))
+
 
 @app.route('/login')
 def login():
@@ -18,7 +20,7 @@ def login():
     return render_template('login.html', titulo='Login', estilo=estilo_login, form=form, proxima=proxima, visibility='hidden')
 
 
-@app.route('/autenticar', methods=['POST', ])
+@app.route('/autenticar', methods=['GET', 'POST'])
 def autenticar():
     form = FormularioUsuario(request.form)  # instanciar a validação do formulario
     usuario = Usuarios.query.filter_by(nome=form.nome.data).first()  # faz a query no banco de dados
@@ -26,6 +28,7 @@ def autenticar():
     proxima_pagina = request.form['proxima']
     if usuario and senha:  # se usuario e senha estiverem corretos, segue o login
         session['usuario_logado'] = usuario.nome
+        login_user(usuario)
         flash(usuario.nome + 'logado com sucesso')
         if proxima_pagina == 'None':
             proxima_pagina = url_for('home')

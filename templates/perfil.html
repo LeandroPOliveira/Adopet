@@ -8,7 +8,7 @@
             <p class="formulario__titulo">Perfil</p>
             <div class="formulario__item foto">
                 <p class="n-foto">Foto</p>
-                <img src="../uploads/user{{current_user.id}}.png" alt="Foto do usuário cadastrado">
+                <img src="../uploads/user{{current_user.id}}.png" width="100" alt="Foto do usuário cadastrado">
                 <p><a class="desc-foto">Clique na foto para editar</a></p>
             </div>
             <div class="formulario__item">
@@ -17,15 +17,15 @@
             </div>
             <div class="formulario__item">
                 {{ form.telefone.label(class="label-perfil") }}
-                {{ form.telefone(class="input-perfil", placeholder="Insira seu telefone e/ou whatsapp") }}
+                {{ form.telefone(class="input-perfil", placeholder=current_user.telefone) }}
             </div>
             <div class="formulario__item">
                 {{ form.cidade.label(class="label-perfil") }}
-                {{ form.cidade(class="input-perfil", placeholder="Digite sua cidade") }}
+                {{ form.cidade(class="input-perfil", placeholder=current_user.cidade) }}
             </div>
             <div class="formulario__item sobre">
                 {{ form.sobre.label(class="label-perfil") }}
-                {{ form.sobre(rows="5", class="textarea-perfil", placeholder="Fale sobre você") }}
+                {{ form.sobre(rows="5", class="textarea-perfil", placeholder=current_user.sobre) }}
             </div>
             <div class="formulario__item form-botao">
                 {{ form.salvar(class="botao-perfil") }}

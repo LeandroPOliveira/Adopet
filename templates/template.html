@@ -27,7 +27,11 @@
                 <li><a href={{url_for('mensagem')}}><img class="icone figuras"
                             src="{{ url_for('static', filename='img/Mensagens.svg') }}"></a></li>
             </ul>
-            <a href="{{ url_for('perfil') }}"><img style="visibility:{{ visibility }}" src="{{ url_for('static', filename='img/Usuário.png') }}" alt="Foto perfil usuário padrão"></a>
+            {% if current_user.id %}
+                <a href="{{ url_for('perfil') }}"><img style="visibility:{{ visibility }}" src="uploads/user{{current_user.id}}.png" height="70" alt="Foto perfil usuário padrão"></a>
+            {% else %}
+                <a href="{{ url_for('perfil') }}"><img style="visibility:{{ visibility }}" src="{{ url_for('static', filename='img/Usuário.png') }}"alt="Foto perfil usuário padrão"></a>
+            {% endif %}
         </div>
 
     </header>

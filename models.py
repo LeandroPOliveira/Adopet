@@ -16,7 +16,7 @@ class Pets(db.Model):
 class Usuarios(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     email = db.Column(db.String(60), primary_key=False)
-    nome = db.Column(db.String(20), primary_key=True)
+    nome = db.Column(db.String(20), primary_key=False)
     senha = db.Column(db.String(20), nullable=False)
     telefone = db.Column(db.String(20), nullable=False)
     cidade = db.Column(db.String(40), nullable=False)
