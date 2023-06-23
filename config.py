@@ -4,12 +4,12 @@ SECRET_KEY = 'botina'
 
 # SQLALCHEMY_DATABASE_URI = 'sqlite:///' + r'C:\Users\loliveira\PycharmProjects\Flask\adopet'
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + r'C:\Users\leand\PycharmProjects\bikestore\Alura-Challenge\adopet'
-# '{SGBD}://{usuario}:{senha}@{servidor}/{database}'.format(
+# SQLALCHEMY_DATABASE_URI = '{SGBD}://{usuario}:{senha}@{servidor}/{database}'.format(
 # SGBD= 'mysql+mysqlconnector',
-# servidor = 'localhost',
-# usuario = 'root',
+# servidor = 'leandro500.mysql.pythonanywhere-services.com',
+# usuario = 'leandro500',
 # senha = os.environ['senha'],
-# database = 'catalogo')
+# database = 'leandro500$adopet')
 
 UPLOAD_PATH = os.path.dirname(os.path.abspath(__file__)) + '/uploads'
 
