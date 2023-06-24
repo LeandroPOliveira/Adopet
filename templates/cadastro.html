@@ -2,15 +2,6 @@
 {% block conteudo %}
 
 <main>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul id="messages" class="list-unstyled">
-        {% for message in messages %}
-        <li class="alert alert-success">{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
     <img class="logo-azul" src="{{ url_for('static', filename='img/Logo_-_Azul.svg') }}" alt="Logo Adopet">
     <h1 class='boas-vindas'>Ainda não tem cadastro?<br>Então antes de buscar seu melhor amigo, precisamos de alguns
         dados:</h1>

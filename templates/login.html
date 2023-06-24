@@ -1,38 +1,30 @@
 {% extends 'template.html' %}
 {% block conteudo %}
 
-        <main>
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                <ul id="messages" class="list-unstyled">
-                {% for message in messages %}
-                    <li class="alert alert-success">{{ message }}</li>
-                {% endfor %}
-                </ul>
-            {% endif %}
-            {% endwith %}
-            <img class="logo-azul" src="{{ url_for('static', filename='img/Logo_-_Azul.svg') }}" alt="Logo Adopet">
-            <h1 class='mensagem'>Já tem conta? Faça seu login:</h1>
-                
-            <form method="POST" action="{{ url_for('autenticar') }}">
-                <input type="hidden" name="proxima" value="{{ proxima }}">
-                {{ form.csrf_token() }}
-                <div class="formulario-login">
-                    {{ form.nome.label(class="label-login") }}
-                    {{ form.nome(class="input-login") }}
-                </div>
-                <div class="formulario-login form-senha">
-                    {{ form.senha.label(class="label-login") }}
-                    {{ form.senha(class="input-login senha-login") }}
-                </div>
-                <div class="formulario-login">
-                    <a href="">Esqueci minha senha</a>
-                </div>
-                <div class="formulario-login form-botao">
-                    {{ form.login(class="botao-login") }}
-                </div>
-            </form>
-            <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-        </main>
+<main>
+
+    <img class="logo-azul" src="{{ url_for('static', filename='img/Logo_-_Azul.svg') }}" alt="Logo Adopet">
+    <h1 class='mensagem'>Já tem conta? Faça seu login:</h1>
+
+    <form method="POST" action="{{ url_for('autenticar') }}">
+        <input type="hidden" name="proxima" value="{{ proxima }}">
+        {{ form.csrf_token() }}
+        <div class="formulario-login">
+            {{ form.nome.label(class="label-login") }}
+            {{ form.nome(class="input-login") }}
+        </div>
+        <div class="formulario-login form-senha">
+            {{ form.senha.label(class="label-login") }}
+            {{ form.senha(class="input-login senha-login") }}
+        </div>
+        <div class="formulario-login">
+            <a href="">Esqueci minha senha</a>
+        </div>
+        <div class="formulario-login form-botao">
+            {{ form.login(class="botao-login") }}
+        </div>
+    </form>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</main>
 
 {% endblock %}

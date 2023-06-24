@@ -29,7 +29,7 @@ def autenticar():
     if usuario and senha:  # se usuario e senha estiverem corretos, segue o login
         session['usuario_logado'] = usuario.nome
         login_user(usuario)
-        flash(usuario.nome + 'logado com sucesso')
+        flash(usuario.nome + ' logado com sucesso')
         if proxima_pagina == 'None':
             proxima_pagina = url_for('home')
         return redirect(proxima_pagina)
