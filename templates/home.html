@@ -13,7 +13,7 @@
                         <p class="descricao__dados">{{pet.porte}}</p>
                         <p class="descricao__dados">{{pet.descricao}}</p>
                         <p class="descricao__dados">{{pet.localidade}}</p>
-                        <p class="descricao__dados">Falar com responsável</p>
+                        <p class="descricao__dados"><a href="{{ url_for('mensagem')}}">Falar com responsável</a></p>
                     </div>
                 </div>
                 {% endfor %}

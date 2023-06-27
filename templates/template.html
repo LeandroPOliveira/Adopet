@@ -22,7 +22,7 @@
     {% if messages %}
     <ul id="messages" class="list-unstyled">
         {% for message in messages %}
-        <div class="alert">
+        <div class="alert" id="alerta">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             {{ message }}
         </div>
@@ -55,7 +55,7 @@
     <footer>
         <p id="rodape">2022 - Desenvolvido por Leandro Oliveira</p>
     </footer>
-
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>

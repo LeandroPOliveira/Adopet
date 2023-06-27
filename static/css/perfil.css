@@ -48,6 +48,14 @@ body {
     color: lightcoral;
 }
 
+.imagem-perfil {
+    display: none;
+}
+
+.fileContainer {
+    cursor: pointer;
+}
+
 .input-perfil, .textarea-perfil {
     font-size: 1rem;
     text-align: left;

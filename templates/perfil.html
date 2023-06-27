@@ -8,8 +8,15 @@
             <p class="formulario__titulo">Perfil</p>
             <div class="formulario__item foto">
                 <p class="n-foto">Foto</p>
-                <img src="../uploads/user{{current_user.id}}.png" width="100" alt="Foto do usuário cadastrado">
-                <p><a class="desc-foto">Clique na foto para editar</a></p>
+                <figure class="img-thumbnail">
+                    <label class="fileContainer">
+                        <span class="img-fluid">
+                            <img src="../uploads/user{{current_user.id}}.png" width="100" alt="Foto do usuário cadastrado">
+                        </span>
+                        <input type="file" accept=".png" name="arquivo" class="imagem-perfil">
+                    </label>
+                </figure>
+                <p class="desc-foto">Clique na foto para editar</p>
             </div>
             <div class="formulario__item">
                 {{ form.nome.label(class="label-perfil") }}

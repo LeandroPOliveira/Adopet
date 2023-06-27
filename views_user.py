@@ -5,6 +5,7 @@ from models import Usuarios
 from flask_bcrypt import check_password_hash, generate_password_hash
 from main import login_manager
 from flask_login import login_user
+from PIL import Image
 
 
 @login_manager.user_loader
@@ -73,11 +74,12 @@ def criar():
     novo_usuario = Usuarios(email=email, nome=nome, senha=generate_password_hash(senha))
     db.session.add(novo_usuario)
     db.session.commit()
+    flash('Usuário cadastrado com sucesso!')
 
-    # arquivo = request.files['arquivo']
-    # upload_path = app.config['UPLOAD_PATH']
+    arquivo = Image.open('static/img/Usuário.png')
+    upload_path = app.config['UPLOAD_PATH']
     # timestamp = time.time()
-    # arquivo.save(f'{upload_path}/capa{nova_bike.id}-{timestamp}.jpg')
+    arquivo.save(f'{upload_path}/user{novo_usuario.id}.png')
 
     return redirect(url_for('home'))
 
@@ -110,4 +112,11 @@ def atualizar():
         # deleta_arquivo(bike.id)
         arquivo.save(f'{upload_path}/capa{perfil.id}.jpg')
 
+    return redirect(url_for('index'))
+
+
+@app.route('/logout')
+def logout():
+    session['usuario_logado'] = None
+    flash('Logout efetuado com sucesso!')
     return redirect(url_for('index'))
