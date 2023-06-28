@@ -39,3 +39,10 @@ class FormularioContato(FlaskForm):
     animal = StringField('Animal', [validators.DataRequired(), validators.Length(min=1, max=50)])
     mensagem = TextAreaField('Mensagem', [validators.DataRequired(), validators.Length(min=1, max=150)])
     enviar = SubmitField('Enviar')
+
+def recupera_imagem(id):
+    for nome_arquivo in os.listdir(app.config['UPLOAD_PATH']):
+        if f'user{id}' in nome_arquivo:
+            return nome_arquivo
+
+    return 'Usuário.png'

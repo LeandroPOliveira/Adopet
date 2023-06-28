@@ -55,7 +55,7 @@ def send():
     )
 
     mail.send(msg)
-    flash('Mensagem enviada com sucesso!')
+    flash('Mensagem enviada com sucesso!', 'sucesso')
 
     return redirect('/home')
 

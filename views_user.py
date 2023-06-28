@@ -1,10 +1,10 @@
 from main import app, db
 from flask import render_template, request, url_for, session, flash, redirect
-from helpers import FormularioUsuario, FormularioPerfil
+from helpers import FormularioUsuario, FormularioPerfil, recupera_imagem
 from models import Usuarios
 from flask_bcrypt import check_password_hash, generate_password_hash
 from main import login_manager
-from flask_login import login_user
+from flask_login import login_user, current_user
 from PIL import Image
 
 
@@ -30,12 +30,12 @@ def autenticar():
     if usuario and senha:  # se usuario e senha estiverem corretos, segue o login
         session['usuario_logado'] = usuario.nome
         login_user(usuario)
-        flash(usuario.nome + ' logado com sucesso')
+        flash(usuario.nome + ' logado com sucesso', 'sucesso')
         if proxima_pagina == 'None':
             proxima_pagina = url_for('home')
         return redirect(proxima_pagina)
     else:
-        flash('Usuario não encontrado')
+        flash('Usuario não encontrado', 'erro')
         return redirect(url_for('login'))
 
 
@@ -53,7 +53,7 @@ def criar():
     print(form.email.data)
     print(form.email)
     if not form.validate_on_submit():
-        flash('Erro!')
+        flash('Erro!', 'erro')
         return redirect(url_for('cadastro'))
 
     email = form.email.data
@@ -64,17 +64,17 @@ def criar():
     usuario = Usuarios.query.filter_by(email=email).first()
 
     if usuario:
-        flash('Email já cadastrado!')
+        flash('Email já cadastrado!', 'erro')
         return redirect(url_for('cadastro'))
 
     if senha != conf_senha:
-        flash('As 2 senhas devem ser iguais!')
+        flash('As 2 senhas devem ser iguais!', 'erro')
         return redirect(url_for('cadastro'))
 
     novo_usuario = Usuarios(email=email, nome=nome, senha=generate_password_hash(senha))
     db.session.add(novo_usuario)
     db.session.commit()
-    flash('Usuário cadastrado com sucesso!')
+    flash('Usuário cadastrado com sucesso!', 'sucesso')
 
     arquivo = Image.open('static/img/Usuário.png')
     upload_path = app.config['UPLOAD_PATH']
@@ -89,7 +89,13 @@ def perfil():
     if 'usuario_logado' not in session or session['usuario_logado'] == None:
         return redirect(url_for('login', proxima=url_for('perfil')))
     form = FormularioPerfil()
-    return render_template('perfil.html', titulo='Meu perfil', visibility='visible', form=form)
+    usuario = Usuarios.query.filter_by(id=current_user.id).first()
+    form.nome.data = usuario.nome
+    form.telefone.data = usuario.telefone
+    form.cidade.data = usuario.cidade
+    form.sobre.data = usuario.sobre
+    capa_jogo = recupera_imagem(current_user.id)
+    return render_template('perfil.html', titulo='Meu perfil', visibility='visible', form=form, capa_jogo=capa_jogo)
 
 
 @app.route('/atualizar', methods=['POST', ])
@@ -97,7 +103,8 @@ def atualizar():
     form = FormularioPerfil(request.form)
 
     if form.validate_on_submit():
-        perfil = Usuarios.query.filter_by(id=request.form['id']).first()
+        print(current_user.id)
+        perfil = Usuarios.query.filter_by(id=current_user.id).first()
         perfil.nome = form.nome.data
         perfil.telefone = form.telefone.data
         perfil.cidade = form.cidade.data
@@ -110,13 +117,14 @@ def atualizar():
         upload_path = app.config['UPLOAD_PATH']
         # timestamp = time.time()
         # deleta_arquivo(bike.id)
-        arquivo.save(f'{upload_path}/capa{perfil.id}.jpg')
+        arquivo.save(f'{upload_path}/user{perfil.id}.png')
+        flash('Perfil atualizado com sucesso!', 'sucesso')
 
-    return redirect(url_for('index'))
+    return redirect(url_for('home'))
 
 
 @app.route('/logout')
 def logout():
     session['usuario_logado'] = None
-    flash('Logout efetuado com sucesso!')
+    flash('Logout efetuado com sucesso!', 'sucesso')
     return redirect(url_for('index'))

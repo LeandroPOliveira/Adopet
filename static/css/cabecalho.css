@@ -11,11 +11,18 @@ body {
     background-size: 45% 250px, 95% 350px, 20% 40%;
 }
 
-.alert {
+.sucesso {
   padding: 20px;
-  background-color: #198754; /* Red */
-  color: white;
+  background-color: #d1e7dd;
+  color: #125335;
   margin-bottom: 15px;
+}
+
+.erro {
+    padding: 20px;
+    background-color: #FF7F7F;
+    color: white;
+    margin-bottom: 15px;
 }
 
 /* The close button */
