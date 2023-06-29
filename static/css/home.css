@@ -27,7 +27,7 @@ br {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 5rem 2rem;
+    margin: 2rem;
     
 }
 .ficha-animal {

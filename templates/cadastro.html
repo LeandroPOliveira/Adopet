@@ -2,8 +2,8 @@
 {% block conteudo %}
 
 <main>
-    <img class="logo-azul" src="{{ url_for('static', filename='img/Logo_-_Azul.svg') }}" alt="Logo Adopet">
-    <h1 class='boas-vindas'>Ainda não tem cadastro?<br>Então antes de buscar seu melhor amigo, precisamos de alguns
+    <img class="logo-azul" src="{{ url_for('static', filename='img/Logo-azul.svg') }}" alt="Logo Adopet">
+    <h1 class='boas-vindas'>Ainda não tem cadastro?<br> Então antes de buscar seu melhor amigo, precisamos de alguns
         dados:</h1>
     <form action="{{ url_for('criar') }}" method="post" enctype="multipart/form-data">
         {{ form.csrf_token() }}
