@@ -103,7 +103,6 @@ def atualizar():
     form = FormularioPerfil(request.form)
 
     if form.validate_on_submit():
-        print(current_user.id)
         perfil = Usuarios.query.filter_by(id=current_user.id).first()
         perfil.nome = form.nome.data
         perfil.telefone = form.telefone.data
@@ -114,11 +113,15 @@ def atualizar():
         db.session.commit()
 
         arquivo = request.files['arquivo']
-        upload_path = app.config['UPLOAD_PATH']
-        # timestamp = time.time()
-        # deleta_arquivo(bike.id)
-        arquivo.save(f'{upload_path}/user{perfil.id}.png')
-        flash('Perfil atualizado com sucesso!', 'sucesso')
+
+        if arquivo.filename == '':
+            pass
+        else:
+            upload_path = app.config['UPLOAD_PATH']
+            # timestamp = time.time()
+            # deleta_arquivo(bike.id)
+            arquivo.save(f'{upload_path}/user{perfil.id}.png')
+            flash('Perfil atualizado com sucesso!', 'sucesso')
 
     return redirect(url_for('home'))
 
