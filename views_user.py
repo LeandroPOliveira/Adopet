@@ -24,11 +24,11 @@ def login():
 @app.route('/autenticar', methods=['GET', 'POST'])
 def autenticar():
     form = FormularioUsuario(request.form)  # instanciar a validação do formulario
-    usuario = Usuarios.query.filter_by(nome=form.nome.data).first()  # faz a query no banco de dados
+    usuario = Usuarios.query.filter_by(email=form.email.data).first()  # faz a query no banco de dados
     senha = check_password_hash(usuario.senha, form.senha.data)  # checa se a senha corresponde
     proxima_pagina = request.form['proxima']
     if usuario and senha:  # se usuario e senha estiverem corretos, segue o login
-        session['usuario_logado'] = usuario.nome
+        session['usuario_logado'] = usuario.email
         login_user(usuario)
         flash(usuario.nome + ' logado com sucesso', 'sucesso')
         if proxima_pagina == 'None':

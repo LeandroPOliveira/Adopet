@@ -15,8 +15,8 @@ def index():
 @app.route('/home')
 def home():
     estilo_home = 'css/home.css'
-    if 'usuario_logado' not in session or session['usuario_logado'] is None:
-        return redirect(url_for('login', proxima=url_for('home'), estilo=estilo_home, visibility='visible'))
+    # if 'usuario_logado' not in session or session['usuario_logado'] is None:
+    #     return redirect(url_for('login', proxima=url_for('home'), estilo=estilo_home, visibility='visible'))
 
     lista = Pets.query.order_by(Pets.id)
 

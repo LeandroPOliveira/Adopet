@@ -10,8 +10,8 @@
         <input type="hidden" name="proxima" value="{{ proxima }}">
         {{ form.csrf_token() }}
         <div class="formulario-login">
-            {{ form.nome.label(class="label-login") }}
-            {{ form.nome(class="input-login") }}
+            {{ form.email.label(class="label-login") }}
+            {{ form.email(class="input-login") }}
         </div>
         <div class="formulario-login form-senha">
             {{ form.senha.label(class="label-login") }}

@@ -33,20 +33,20 @@ TABLES['pets'] = ('''
       CREATE TABLE 'pets' (
       'id' integer PRIMARY KEY AUTOINCREMENT,
       'nome' varchar(50) NOT NULL,
-      'idade' varchar(20) NOT NULL,
+      'idade' varchar(10) NOT NULL,
       'porte' varchar(30) NOT NULL,
-      'descricao' varchar(40) NOT NULL,
+      'descricao' varchar(50) NOT NULL,
       'localidade' varchar(40) NOT NULL);''')
 
 TABLES['usuarios'] = ('''
       CREATE TABLE 'usuarios' (
       'id' integer PRIMARY KEY AUTOINCREMENT,
-      'email' varchar(60),
-      'senha' varchar(20) NOT NULL,
-      'nome' varchar(20),
+      'email' varchar(50),
+      'senha' varchar(100) NOT NULL,
+      'nome' varchar(40),
       'telefone' varchar(20),
       'cidade' varchar(40),
-      'sobre' varchar(100)
+      'sobre' varchar(200)
       );''')
 
 for tabela_nome in TABLES:
@@ -58,11 +58,11 @@ for tabela_nome in TABLES:
 # inserindo usuarios
 usuario_sql = 'INSERT INTO usuarios (email, senha, nome, telefone, cidade, sobre) VALUES (?, ?, ?, ?, ?, ?)'
 usuarios = [
-      ('admin@hotmail.com', generate_password_hash("123456"), "admin", '169999-0000', 'Batatais',
-       'Lorem ipsum quos atque'),
-      ('leandron@hotmail.com', generate_password_hash("teste"), "Leandro", '169999-1111', 'Araraquara',
+      ('admin@email.com', generate_password_hash("admin321"), "Admin", '169999-0000', 'Batatais',
+       'Administrador do site'),
+      ('user1@hotmail.com', generate_password_hash("user123"), "Usuario1", '169999-1111', 'Araraquara',
        'Lorem ipsum quos atque1'),
-      ('erika@hotmail.com', generate_password_hash("bagual"), "Erika", '169999-2222', 'Batatais',
+      ('user2@hotmail.com', generate_password_hash("user213"), "Usuario2", '169999-2222', 'Batatais',
        'Lorem ipsum quos atque2'),
 
 ]
