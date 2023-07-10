@@ -18,6 +18,7 @@ inputFile.addEventListener("change", function (e) {
     reader.addEventListener("load", function (e) {
       const readerTarget = e.target;
       const img = document.createElement("img");
+      img.style.width = "100px";
       img.src = readerTarget.result;
       img.classList.add("img-fluid");
 

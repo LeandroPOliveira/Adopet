@@ -76,8 +76,8 @@ def criar():
     db.session.commit()
     flash('Usuário cadastrado com sucesso!', 'sucesso')
 
-    arquivo = Image.open('static/img/Usuário.png')
     upload_path = app.config['UPLOAD_PATH']
+    arquivo = Image.open(f'{upload_path}/Usuário.png')
     # timestamp = time.time()
     arquivo.save(f'{upload_path}/user{novo_usuario.id}.png')
 
