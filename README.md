@@ -13,7 +13,7 @@ Este é um projeto focado em layout responsivo, sendo a abordagem mobile first.
 | -------------  | --- |
 | :sparkles: Nome        | Adopet
 | :label: Tecnologias | HTML, CSS
-| :rocket: URL         | https://www.alura-challenge-adopet.vercel.app
+| :rocket: URL         | https://leandro500.pythonanywhere.com/
 | :fire: Desafio     | https://www.alura.com.br/challenges/front-end-4
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
